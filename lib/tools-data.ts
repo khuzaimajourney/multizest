@@ -1,0 +1,1089 @@
+import { ToolItem, ToolCategory } from './types';
+import { CATEGORIES_DATA } from './categories-data';
+
+export const TOOL_CATEGORIES = CATEGORIES_DATA;
+
+export const TOOLS_DATA: ToolItem[] = [
+  // PDF TOOLS (3)
+  {
+    id: 'pdf-to-image',
+    slug: 'pdf-to-image',
+    name: 'PDF to Image Converter',
+    tagline: 'Convert PDF Pages to JPG/PNG Online',
+    shortDescription: 'Convert any PDF file to high-quality JPG or PNG images instantly in your browser with custom page ranges and quality settings.',
+    longDescription: 'The MultiZest PDF to Image Converter turns each page of your PDF document into a high-resolution image file (JPG or PNG). This is essential when you need to share specific pages from a PDF on social networks, embed them in presentations, or import them into design tools that do not accept PDF files. Everything is executed entirely in your local browser sandbox — your confidential documents are never uploaded to any remote server.',
+    category: 'pdf-tools',
+    categoryName: 'PDF Tools',
+    iconName: 'FileText',
+    badge: 'Popular',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 384,
+    howToSteps: [
+      {
+        title: 'Upload Your PDF Document',
+        description: 'Drag and drop your PDF into the upload zone or click to select a file from your computer or phone (up to 50MB supported).',
+      },
+      {
+        title: 'Select Image Format & Quality',
+        description: 'Choose JPG for compact file sizes or PNG for crisp lines and text sharpness. Fine-tune your quality preference using the slider.',
+      },
+      {
+        title: 'Specify Pages to Convert',
+        description: 'Choose to convert all pages or enter a custom range such as "1-3, 5" to extract only the slides or pages you require.',
+      },
+      {
+        title: 'Convert & Preview',
+        description: 'Click "Convert to Images". Each page renders in real time with high-fidelity canvas rasterization.',
+      },
+      {
+        title: 'Download Individually or as a ZIP',
+        description: 'Download individual page images with one click, or download all pages bundled in a single ZIP archive.',
+      },
+    ],
+    features: [
+      'Export PDF pages to high-resolution JPG or PNG formats',
+      'Flexible page selection: convert all pages or custom ranges (e.g. 1-4, 7)',
+      'Adjustable rendering scale and JPEG compression quality',
+      'Download all rendered pages bundled in an instant ZIP archive',
+      '100% private & client-side — your files never touch external servers',
+      'Responsive interface optimized for desktop, tablet, and mobile browsers',
+    ],
+    faqs: [
+      {
+        question: 'What is the maximum file size supported?',
+        answer: 'The MultiZest PDF to Image Converter easily handles PDF files up to 50MB. Because conversion relies on your device memory, high-spec computers can even handle larger files.',
+      },
+      {
+        question: 'Will my PDF files ever be uploaded to a remote server?',
+        answer: 'No. All PDF parsing and image rendering happens 100% inside your web browser using HTML5 Canvas and client-side Web Workers. Your data remains strictly on your device.',
+      },
+      {
+        question: 'Can I convert password-protected PDF files?',
+        answer: 'Currently, encrypted or password-protected PDFs must have their security restriction removed before conversion. We plan to add password prompt unlocking in an upcoming release.',
+      },
+      {
+        question: 'Should I choose JPG or PNG format?',
+        answer: 'Choose JPG if you need smaller image file sizes for websites, emails, or messaging apps. Choose PNG if your PDF contains diagrams, sharp line art, or small typography where you want zero compression artifacts.',
+      },
+    ],
+    relatedToolSlugs: ['merge-pdf', 'compress-pdf', 'image-compressor'],
+  },
+  {
+    id: 'merge-pdf',
+    slug: 'merge-pdf',
+    name: 'Merge PDF',
+    tagline: 'Combine Multiple PDFs Into One Online',
+    shortDescription: 'Combine multiple PDF documents into a single organized file with easy drag-and-drop reordering.',
+    longDescription: 'The MultiZest Merge PDF tool allows you to combine separate PDF documents into a unified, seamlessly numbered publication. Whether you are assembling a job application package (resume + cover letter + credentials), collating monthly invoices, or creating a comprehensive portfolio, drag and drop your files into your preferred order and merge in seconds directly in your browser.',
+    category: 'pdf-tools',
+    categoryName: 'PDF Tools',
+    iconName: 'Files',
+    badge: 'Essential',
+    featured: true,
+    rating: 4.8,
+    ratingCount: 295,
+    howToSteps: [
+      {
+        title: 'Upload Two or More PDF Files',
+        description: 'Drag and drop your PDF files into the container or click to browse multiple documents from your file manager.',
+      },
+      {
+        title: 'Organize and Reorder',
+        description: 'Use the move up/down controls or drag items to ensure pages will appear in your desired sequential order.',
+      },
+      {
+        title: 'Execute Merge',
+        description: 'Click "Merge PDFs" to stitch the PDF structures together instantly on your device.',
+      },
+      {
+        title: 'Download Unified PDF',
+        description: 'Review the merged document metrics (total page count and size) and save your new combined file.',
+      },
+    ],
+    features: [
+      'Merge unlimited PDF files into a single master document',
+      'Intuitive file reordering with real-time page count inspection',
+      'Preserves original vector quality, typography, and embedded graphics',
+      'Ultra-fast client-side execution powered by pdf-lib',
+      'Zero server transfers ensuring complete legal and financial confidentiality',
+    ],
+    faqs: [
+      {
+        question: 'How many PDF documents can I merge simultaneously?',
+        answer: 'There is no artificial restriction. You can combine 2, 10, or 25+ PDF files as long as your device web browser has sufficient memory.',
+      },
+      {
+        question: 'Does merging reduce document resolution or visual quality?',
+        answer: 'No. Our engine performs binary structure merging, retaining all original vector shapes, high-resolution photographs, and embedded fonts.',
+      },
+      {
+        question: 'Can I remove individual files before merging?',
+        answer: 'Yes! Each uploaded PDF item displays a remove button so you can curate your queue before creating the combined file.',
+      },
+    ],
+    relatedToolSlugs: ['pdf-to-image', 'compress-pdf', 'image-converter'],
+  },
+  {
+    id: 'compress-pdf',
+    slug: 'compress-pdf',
+    name: 'Compress PDF',
+    tagline: 'Reduce PDF File Size Online',
+    shortDescription: 'Compress PDF files to reduce storage size while maintaining readability and crisp document typography.',
+    longDescription: 'The MultiZest PDF Compressor reduces the byte weight of heavy PDF files so they easily pass through email attachment limits, portal upload quotas, and mobile transfer bottlenecks. By optimizing internal object streams and consolidating metadata locally, your PDFs become significantly leaner while text remains sharp and easy to read.',
+    category: 'pdf-tools',
+    categoryName: 'PDF Tools',
+    iconName: 'FileArchive',
+    badge: 'Popular',
+    featured: false,
+    rating: 4.7,
+    ratingCount: 218,
+    howToSteps: [
+      {
+        title: 'Upload Your Heavy PDF Document',
+        description: 'Drag and drop any PDF up to 50MB into the upload box.',
+      },
+      {
+        title: 'Select Compression Strength',
+        description: 'Choose between Low (best visual preservation), Medium (balanced for email), or High (maximum size reduction).',
+      },
+      {
+        title: 'Process Compression',
+        description: 'Click "Compress PDF" to optimize the document structure in your browser.',
+      },
+      {
+        title: 'Compare & Download',
+        description: 'Inspect the before and after file size comparison and download the optimized PDF.',
+      },
+    ],
+    features: [
+      'Three selectable compression profiles: Low, Medium, and High',
+      'Real-time before/after byte reduction analytics and percentage savings',
+      'Preserves text clarity and vector diagram sharpness',
+      'Solves strict email attachment constraints and portal upload limits',
+      '100% private in-browser operation with zero data uploads',
+    ],
+    faqs: [
+      {
+        question: 'How much file size reduction can I expect?',
+        answer: 'Typical reductions range between 25% and 65% depending on whether the source PDF contains uncompressed photographic scans or redundant streams.',
+      },
+      {
+        question: 'Will text inside the PDF become blurry?',
+        answer: 'No. Vector fonts and typographic outlines are preserved digitally, meaning text remains perfectly sharp at any zoom level.',
+      },
+      {
+        question: 'Is this safe for confidential legal agreements?',
+        answer: 'Absolutely. The compression code runs 100% inside your browser sandbox. The PDF never touches any remote server or third party.',
+      },
+    ],
+    relatedToolSlugs: ['merge-pdf', 'pdf-to-image', 'image-compressor'],
+  },
+
+  // IMAGE TOOLS (4)
+  {
+    id: 'image-compressor',
+    slug: 'image-compressor',
+    name: 'Image Compressor',
+    tagline: 'Reduce Image Size Without Losing Quality',
+    shortDescription: 'Compress JPG, PNG, and WebP images to reduce file size while maintaining stunning visual clarity.',
+    longDescription: 'The MultiZest Image Compressor reduces the file size of your images dramatically without visible degradation in visual fidelity. Large graphic files slow down webpage loading times, consume mobile bandwidth, and can exceed email attachment limits. Our browser-based compression pipeline uses perceptual quantization and intelligent chroma subsampling to trim up to 80% of file weight instantly.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Minimize2',
+    badge: 'Trending',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 512,
+    howToSteps: [
+      {
+        title: 'Upload One or Multiple Images',
+        description: 'Drag and drop up to 10 JPG, PNG, or WebP images into the upload container or browse your device storage.',
+      },
+      {
+        title: 'Adjust Compression Level',
+        description: 'Set your preferred quality level (default 80% provides an ideal balance of minuscule file size and pristine visuals).',
+      },
+      {
+        title: 'Set Optional Dimension Constraints',
+        description: 'Optionally specify maximum width or height to automatically downscale ultra-high-resolution photos.',
+      },
+      {
+        title: 'Execute Compression',
+        description: 'Click "Compress Images" to process your files locally in parallel.',
+      },
+      {
+        title: 'Compare & Download',
+        description: 'Review the side-by-side comparison with exact percentage savings, then download images individually or all together.',
+      },
+    ],
+    features: [
+      'Compress JPG, PNG, and WebP formats simultaneously',
+      'Batch compress up to 10 files in a single pass',
+      'Precise quality slider from 1% to 100% with live estimation',
+      'Before-and-after visual inspection with real-time file size reduction metrics',
+      'Optional maximum dimension downscaling to optimize web assets',
+      'Completely client-side with zero telemetry or file transfers',
+    ],
+    faqs: [
+      {
+        question: 'How much file size reduction can I expect?',
+        answer: 'Most JPEG and WebP photos achieve 50% to 80% reduction at our recommended 80% quality preset, with virtually no visible difference to the naked human eye.',
+      },
+      {
+        question: 'Does this tool strip EXIF metadata for privacy?',
+        answer: 'Yes! Re-encoding in the browser automatically strips extraneous camera coordinates, device serial numbers, and private geolocation tags.',
+      },
+      {
+        question: 'Can I compress transparent PNG images?',
+        answer: 'Yes, transparent PNGs are supported and retain their transparency channels during client-side compression.',
+      },
+    ],
+    relatedToolSlugs: ['image-resizer', 'image-converter', 'image-cropper'],
+  },
+  {
+    id: 'image-resizer',
+    slug: 'image-resizer',
+    name: 'Image Resizer',
+    tagline: 'Resize Images to Any Dimension or Preset',
+    shortDescription: 'Resize your images to exact pixel dimensions, percentage ratios, or social media presets with aspect ratio locking.',
+    longDescription: 'The MultiZest Image Resizer provides pixel-accurate dimensional manipulation for digital creators, web developers, and social media managers. Whether you need an Instagram post square (1080x1080), a YouTube thumbnail (1280x720), a Twitter banner (1500x500), or custom dimensions for print, our canvas-driven scaling engine applies smooth bicubic interpolation for razor-sharp results.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Maximize2',
+    badge: 'Essential',
+    featured: true,
+    rating: 4.8,
+    ratingCount: 420,
+    howToSteps: [
+      {
+        title: 'Upload Your Image',
+        description: 'Select or drop any JPG, PNG, or WebP photo to display its current dimensions and aspect ratio.',
+      },
+      {
+        title: 'Choose Sizing Method',
+        description: 'Toggle between exact pixel dimensions, percentage scaling (10% to 400%), or one-click social media platform presets.',
+      },
+      {
+        title: 'Lock or Unlock Aspect Ratio',
+        description: 'Keep the aspect ratio padlock locked to preserve natural proportions without stretching or warping.',
+      },
+      {
+        title: 'Select Output Format & Resize',
+        description: 'Select whether to retain original format or convert to PNG, JPG, or WebP, then click "Resize Image".',
+      },
+      {
+        title: 'Preview & Save',
+        description: 'Inspect the transformed output and click "Download Resized Image" to save the file instantly.',
+      },
+    ],
+    features: [
+      'Scale by custom pixel dimensions or relative percentage (10% - 400%)',
+      'One-click presets: Instagram Post, Facebook Cover, Twitter Header, YouTube Banner, Full HD, Thumbnail',
+      'Intelligent aspect ratio constraint lock with automatic linked dimension recalculation',
+      'Instant format conversion between JPG, PNG, and WebP during resizing',
+      'High-performance Canvas API with smooth anti-aliased interpolation',
+      'Zero server upload — safe for personal IDs, photos, and internal assets',
+    ],
+    faqs: [
+      {
+        question: 'Will enlarging an image cause it to become blurry?',
+        answer: 'Scaling down preserves sharpness, while scaling up beyond original resolution will interpolate pixels. For best results when creating larger dimensions, start with the highest-resolution source available.',
+      },
+      {
+        question: 'Which social media presets are included?',
+        answer: 'We provide presets for Instagram Posts (1080x1080), Instagram Story (1080x1920), Facebook Cover (820x312), Twitter/X Header (1500x500), YouTube Banner (2560x1440), Full HD (1920x1080), and Avatar Thumbnails (150x150).',
+      },
+    ],
+    relatedToolSlugs: ['image-compressor', 'image-cropper', 'image-converter'],
+  },
+  {
+    id: 'image-converter',
+    slug: 'image-converter',
+    name: 'Image Format Converter',
+    tagline: 'Convert Between JPG, PNG, WebP, BMP & GIF',
+    shortDescription: 'Convert images instantly between major formats with batch support, quality control, and zero quality loss.',
+    longDescription: 'The MultiZest Image Format Converter transforms graphic assets between all modern web and desktop formats: JPG, PNG, WebP, GIF, and BMP. Need to convert transparent PNGs to space-saving WebP? Or change obscure camera formats into universal JPEGs? Our local canvas transcoding pipeline processes your images in parallel with adjustable compression quality.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'RefreshCw',
+    badge: 'Popular',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 312,
+    howToSteps: [
+      {
+        title: 'Upload Images to Convert',
+        description: 'Drag and drop up to 10 images in any format (JPG, PNG, WebP, GIF, or BMP).',
+      },
+      {
+        title: 'Choose Target Format',
+        description: 'Select your desired output format from the toggle list.',
+      },
+      {
+        title: 'Fine-Tune Quality (Optional)',
+        description: 'For lossy formats like JPG or WebP, adjust the quality slider to dial in file size.',
+      },
+      {
+        title: 'Convert & Download',
+        description: 'Click "Convert All" and download individual converted pictures or all bundled in a ZIP.',
+      },
+    ],
+    features: [
+      'Convert between JPG, PNG, WebP, BMP, and GIF formats',
+      'Batch conversion: transform up to 10 images simultaneously',
+      'Preserves transparency channels when exporting to PNG or WebP',
+      'Lossless and adjustable lossy quality controls',
+      'Batch download as a convenient ZIP archive',
+    ],
+    faqs: [
+      {
+        question: 'Which format produces the smallest file sizes for websites?',
+        answer: 'WebP generally provides the best compression-to-quality ratio, delivering files 25% to 35% smaller than comparable JPEGs.',
+      },
+      {
+        question: 'Will transparency be lost when converting PNG to JPG?',
+        answer: 'Yes, because JPG does not support an alpha transparency channel, transparent pixels will render with a clean solid background.',
+      },
+    ],
+    relatedToolSlugs: ['image-compressor', 'image-resizer', 'image-cropper'],
+  },
+  {
+    id: 'image-cropper',
+    slug: 'image-cropper',
+    name: 'Image Cropper',
+    tagline: 'Crop Images to Any Ratio or Dimension',
+    shortDescription: 'Crop, rotate, and adjust your photos with precision aspect ratios for social media and profiles.',
+    longDescription: 'The MultiZest Image Cropper gives you pixel-level framing control over your photos and graphics. Whether you are cropping an avatar to a 1:1 square, adjusting a hero photo for a 16:9 banner, or rotating an inverted photo, our responsive crop box with corner handles and preset aspect ratios guarantees clean composition without quality loss.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Crop',
+    badge: 'New',
+    featured: false,
+    rating: 4.7,
+    ratingCount: 189,
+    howToSteps: [
+      {
+        title: 'Upload Source Picture',
+        description: 'Select or drag any JPG, PNG, or WebP photo into the canvas viewport.',
+      },
+      {
+        title: 'Adjust Framing & Aspect Ratio',
+        description: 'Drag the crop box handles or select a preset ratio (1:1 Square, 16:9 Landscape, 4:3 Standard, 9:16 Story).',
+      },
+      {
+        title: 'Rotate or Flip as Needed',
+        description: 'Use the 90-degree rotate and horizontal/vertical flip controls to adjust orientation.',
+      },
+      {
+        title: 'Crop & Save',
+        description: 'Click "Crop Image" to preview the result and download your framed image.',
+      },
+    ],
+    features: [
+      'Interactive visual crop box with draggable corner and edge handles',
+      'Aspect ratio presets: 1:1, 16:9, 4:3, 3:2, 9:16, 2:3, and Freeform',
+      '90° rotation and horizontal/vertical mirroring toggles',
+      'Live pixel dimension indicators of the cropped zone',
+      'Export to JPG, PNG, or WebP with original quality preservation',
+    ],
+    faqs: [
+      {
+        question: 'Can I crop images to a 1:1 square for Instagram or LinkedIn avatars?',
+        answer: 'Yes! Simply select the "1:1 Square" preset to lock the selection to exact equal width and height.',
+      },
+      {
+        question: 'Does cropping reduce photo resolution?',
+        answer: 'Cropping extracts the selected pixels without downsampling. The cropped area retains 100% of its native clarity.',
+      },
+    ],
+    relatedToolSlugs: ['image-resizer', 'image-compressor', 'image-converter'],
+  },
+
+  // TEXT TOOLS (4)
+  {
+    id: 'word-counter',
+    slug: 'word-counter',
+    name: 'Word Counter & Text Analyzer',
+    tagline: 'Count Words, Characters, Sentences & Reading Time',
+    shortDescription: 'Instantly calculate words, characters, sentences, paragraphs, reading speed, speaking time, and keyword density in real-time.',
+    longDescription: 'The MultiZest Word Counter is an all-in-one text auditing and editing environment. Crafted for students, essayists, authors, journalists, and SEO copywriters, it continuously parses text in real time to calculate character counts (with and without spaces), sentence metrics, paragraph density, and estimated silent reading or speech duration. It also includes keyword frequency analysis and find-and-replace tools.',
+    category: 'text-tools',
+    categoryName: 'Text Tools',
+    iconName: 'FileEdit',
+    badge: 'Popular',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 640,
+    howToSteps: [
+      {
+        title: 'Type or Paste Text',
+        description: 'Paste your copy from Google Docs, Microsoft Word, or an email, or start drafting directly in the editor area.',
+      },
+      {
+        title: 'Review Live Statistics',
+        description: 'Monitor word totals, characters, sentence averages, and reading time as the counters update with every keystroke.',
+      },
+      {
+        title: 'Audit Keyword Frequency',
+        description: 'Examine the keyword density table to ensure you avoid repetitive phrasing and adhere to SEO best practices.',
+      },
+      {
+        title: 'Utilize Find & Replace',
+        description: 'Open the built-in search tool to quickly substitute words, fix typos, or reformat strings across the entire text.',
+      },
+      {
+        title: 'Copy or Format Text',
+        description: 'Use the one-click copy button, or apply instant case transformation (UPPERCASE, lowercase, Title Case).',
+      },
+    ],
+    features: [
+      'Live metric tracking: Words, Characters (with/without spaces), Sentences, Paragraphs',
+      'Realistic Reading Time (200 wpm) and Speaking Time (130 wpm) calculations',
+      'Top keyword density table showing occurrences and percentage distribution',
+      'Integrated Find & Replace utility with case sensitivity support',
+      'Quick case conversion tools: UPPERCASE, lowercase, Capitalized, and Title Case',
+      'Privacy guaranteed: your sensitive writings and essays never leave your browser',
+    ],
+    faqs: [
+      {
+        question: 'How are reading and speaking times estimated?',
+        answer: 'Reading time is calculated using the widely accepted average silent reading pace of 200 words per minute. Speaking time uses the conversational rate of 130 words per minute commonly referenced for presentations and speeches.',
+      },
+      {
+        question: 'Are hyphenated words and contractions counted as one word or two?',
+        answer: 'Standard linguistic tokenization treats contractions (such as "don\'t" or "it\'s") and hyphenated words (such as "state-of-the-art") as single word units, matching Microsoft Word and Google Docs standards.',
+      },
+    ],
+    relatedToolSlugs: ['case-converter', 'lorem-ipsum-generator', 'text-to-speech'],
+  },
+  {
+    id: 'case-converter',
+    slug: 'case-converter',
+    name: 'Case Converter',
+    tagline: 'Change Text Case Instantly',
+    shortDescription: 'Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case.',
+    longDescription: 'The MultiZest Case Converter solves capitalization headaches instantly. Whether you accidentally typed with Caps Lock enabled, need to normalize messy titles into standard Title Case, or require programming naming conventions (camelCase, PascalCase, snake_case, or kebab-case), transform your copy in one click without losing original spacing or punctuation.',
+    category: 'text-tools',
+    categoryName: 'Text Tools',
+    iconName: 'Type',
+    badge: 'Handy',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 260,
+    howToSteps: [
+      {
+        title: 'Paste Your Text',
+        description: 'Enter or paste any sentence, paragraph, code identifier, or headline into the input field.',
+      },
+      {
+        title: 'Select Target Case',
+        description: 'Click any format button: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, or aLtErNaTiNg.',
+      },
+      {
+        title: 'Review & Copy',
+        description: 'Inspect the transformed output in the results panel and copy to your clipboard with one click.',
+      },
+    ],
+    features: [
+      '10 casing transformations: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, alternating case, and inverse case',
+      'Preserves spaces, hyphens, numbers, and special characters intelligently',
+      'Swap feature to move output back to input for successive modifications',
+      'Word and character counters for real-time tracking',
+      'One-click instant clipboard copy with visual confirmation',
+    ],
+    faqs: [
+      {
+        question: 'What is Title Case used for?',
+        answer: 'Title Case capitalizes the primary words of a phrase while keeping small articles (such as "a", "an", "the", "in") lowercase, ideal for blog post titles and news headlines.',
+      },
+      {
+        question: 'What is the difference between camelCase and PascalCase?',
+        answer: 'camelCase begins with a lowercase letter (e.g. userProfileData) whereas PascalCase capitalizes the first letter as well (e.g. UserProfileData).',
+      },
+    ],
+    relatedToolSlugs: ['word-counter', 'lorem-ipsum-generator', 'markdown-preview'],
+  },
+  {
+    id: 'lorem-ipsum-generator',
+    slug: 'lorem-ipsum-generator',
+    name: 'Lorem Ipsum Generator',
+    tagline: 'Generate Dummy Text for Layouts & Mockups',
+    shortDescription: 'Generate classic placeholder dummy text in paragraphs, sentences, or words with optional HTML tag wrapping.',
+    longDescription: 'The MultiZest Lorem Ipsum Generator produces industry-standard placeholder dummy text for web designers, graphic artists, and layout typesetters. When designing UI components, brochure mockups, or wireframes before final copy is ready, generate exact quantities of paragraphs, sentences, or word counts with or without HTML paragraph tags.',
+    category: 'text-tools',
+    categoryName: 'Text Tools',
+    iconName: 'AlignLeft',
+    badge: 'Design',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 195,
+    howToSteps: [
+      {
+        title: 'Choose Generation Unit',
+        description: 'Select whether you want Paragraphs, Sentences, or Words.',
+      },
+      {
+        title: 'Set Desired Quantity',
+        description: 'Enter how many units you need (e.g. 5 paragraphs or 150 words).',
+      },
+      {
+        title: 'Configure Options',
+        description: 'Toggle whether to start with the traditional "Lorem ipsum dolor sit amet..." and whether to wrap in HTML <p> tags.',
+      },
+      {
+        title: 'Generate & Copy',
+        description: 'Click "Generate" and copy as plain text or clean HTML ready to paste into your code or design software.',
+      },
+    ],
+    features: [
+      'Generate by paragraphs, sentences, or exact word counts',
+      'Custom quantity limits from 1 up to 100 units',
+      'Optional traditional "Lorem ipsum..." opening clause',
+      'HTML <p> tag wrapper toggle for web developers',
+      'Live word count calculation of the generated output',
+    ],
+    faqs: [
+      {
+        question: 'Where does Lorem Ipsum come from?',
+        answer: 'Lorem Ipsum derives from sections of Cicero\'s philosophical text "De Finibus Bonorum et Malorum", written in 45 BC, scrambled to serve as dummy typesetting copy since the 1500s.',
+      },
+      {
+        question: 'Is Lorem Ipsum free to use in commercial projects?',
+        answer: 'Yes! It is completely in the public domain and safe to use in personal, academic, and commercial client designs.',
+      },
+    ],
+    relatedToolSlugs: ['word-counter', 'case-converter', 'markdown-preview'],
+  },
+  {
+    id: 'text-to-speech',
+    slug: 'text-to-speech',
+    name: 'Text to Speech Reader',
+    tagline: 'Convert Text to Audio Online',
+    shortDescription: 'Listen to any text read aloud with natural synthesized voices, pitch adjustment, and adjustable playback speeds.',
+    longDescription: 'The MultiZest Text to Speech reader transforms written articles, essays, and notes into spoken audio directly in your browser. Utilizing the native Web Speech API, proofread your writing by hearing mistakes your eyes skip over, listen to study guides on the go, or check pronunciation across multiple languages and accents without sending your text to any cloud service.',
+    category: 'text-tools',
+    categoryName: 'Text Tools',
+    iconName: 'Volume2',
+    badge: 'Audio',
+    featured: false,
+    rating: 4.7,
+    ratingCount: 230,
+    howToSteps: [
+      {
+        title: 'Type or Paste Text',
+        description: 'Enter up to 5,000 characters of text you want spoken aloud.',
+      },
+      {
+        title: 'Select Voice & Accent',
+        description: 'Choose from the natural system voices available on your browser and operating system.',
+      },
+      {
+        title: 'Adjust Speed and Pitch',
+        description: 'Tune playback rate from 0.5x up to 2.0x and adjust the voice pitch slider.',
+      },
+      {
+        title: 'Listen & Follow Along',
+        description: 'Click Play to hear speech synthesis with live word tracking and playback pause controls.',
+      },
+    ],
+    features: [
+      'Access all native system voices available in your operating system',
+      'Adjustable playback speed from 0.5x up to 2.0x',
+      'Custom pitch calibration from 0.5 to 2.0',
+      'Real-time play, pause, resume, and stop playback controls',
+      '100% browser-based Web Speech API — zero server audio streaming',
+    ],
+    faqs: [
+      {
+        question: 'Why do voice choices differ between devices?',
+        answer: 'The Web Speech API accesses voices installed on your local operating system (macOS Siri voices, Windows Narrator voices, Android speech services), giving you local native performance.',
+      },
+      {
+        question: 'Is there a character limit on text to speech?',
+        answer: 'We support up to 5,000 characters per playback pass to maintain smooth browser memory stability.',
+      },
+    ],
+    relatedToolSlugs: ['word-counter', 'case-converter', 'lorem-ipsum-generator'],
+  },
+
+  // GENERATOR TOOLS (3)
+  {
+    id: 'qr-code-generator',
+    slug: 'qr-code-generator',
+    name: 'QR Code Generator',
+    tagline: 'Create Custom Scannable QR Codes Instantly',
+    shortDescription: 'Generate customized QR codes for website URLs, plain text, WiFi access, email messages, phone numbers, and download in PNG or SVG format.',
+    longDescription: 'The MultiZest QR Code Generator lets you build fully customized, permanent, high-contrast QR codes in seconds. Whether you are generating a quick link for product packaging, a contactless WiFi sign-in card for guests, or an email auto-compose trigger for customer support, customize colors, adjust error correction levels, and export in razor-sharp vector SVG or raster PNG.',
+    category: 'generator-tools',
+    categoryName: 'Generator Tools',
+    iconName: 'QrCode',
+    badge: 'Popular',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 710,
+    howToSteps: [
+      {
+        title: 'Choose Payload Type',
+        description: 'Select the information format you want to encode: URL, Plain Text, WiFi Network, Email, or Phone Number.',
+      },
+      {
+        title: 'Enter Payload Details',
+        description: 'Fill in the corresponding fields (e.g. WiFi SSID and password, or target website address).',
+      },
+      {
+        title: 'Customize Visuals',
+        description: 'Select foreground and background color combinations and choose an error correction level (L, M, Q, H).',
+      },
+      {
+        title: 'Set Output Resolution',
+        description: 'Adjust the size slider from 200px up to 1000px to match your web or physical print specifications.',
+      },
+      {
+        title: 'Export in High Quality',
+        description: 'Download your finished QR code as a standard PNG image or as an infinitely scalable SVG graphic.',
+      },
+    ],
+    features: [
+      'Multiple payload modes: URL, Text, WiFi Network credentials, Email, and Phone number',
+      'Interactive color pickers for foreground dots and background canvas',
+      'Configurable Reed-Solomon Error Correction Levels (Low, Medium, Quartile, High)',
+      'High-resolution output sizing up to 1000x1000 pixels',
+      'Dual download formats: lossless PNG for web & documents, or vector SVG for professional print',
+      'Permanent QR codes: generated codes do not redirect through intermediaries and never expire',
+    ],
+    faqs: [
+      {
+        question: 'Do these QR codes have an expiration date?',
+        answer: 'No! These are static, direct-payload QR codes. The destination URL or data is encoded directly into the pattern, meaning they will work forever with no expiration or renewal required.',
+      },
+      {
+        question: 'What is Error Correction and which level should I choose?',
+        answer: 'Error correction allows QR codes to be successfully decoded even if partially obscured, soiled, or printed on textured surfaces. "Medium (15%)" is great for general use, while "High (30%)" is best for outdoor signage, stickers, or printed packaging.',
+      },
+    ],
+    relatedToolSlugs: ['password-generator', 'color-picker', 'image-compressor'],
+  },
+  {
+    id: 'password-generator',
+    slug: 'password-generator',
+    name: 'Secure Password Generator',
+    tagline: 'Create Strong Random Passwords Online',
+    shortDescription: 'Generate cryptographically strong, random passwords with customizable length, symbols, and security audit meters.',
+    longDescription: 'The MultiZest Secure Password Generator produces uncrackable passwords using the browser\'s native Web Crypto API (crypto.getRandomValues). Eliminate vulnerable dictionary words and reused credentials by generating high-entropy combinations of uppercase letters, lowercase letters, numbers, and symbols with live entropy evaluation and no server transmission.',
+    category: 'generator-tools',
+    categoryName: 'Generator Tools',
+    iconName: 'Shield',
+    badge: 'Security',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 480,
+    howToSteps: [
+      {
+        title: 'Set Password Length',
+        description: 'Choose your desired length between 4 and 128 characters (16+ recommended for strong security).',
+      },
+      {
+        title: 'Choose Character Sets',
+        description: 'Toggle uppercase (A-Z), lowercase (a-z), numbers (0-9), and special symbols (!@#$%).',
+      },
+      {
+        title: 'Exclude Ambiguous Characters (Optional)',
+        description: 'Exclude confusing characters like 0, O, 1, l, and I for easy manual transcription.',
+      },
+      {
+        title: 'Generate & Copy',
+        description: 'Check the real-time strength meter, generate multiple passwords, and copy to your clipboard.',
+      },
+    ],
+    features: [
+      'Cryptographically secure randomness via Web Crypto API (crypto.getRandomValues)',
+      'Configurable length from 4 up to 128 characters',
+      'Granular character toggles: Uppercase, Lowercase, Numbers, and Symbols',
+      'Exclude ambiguous characters option to prevent visual reading errors',
+      'Visual password entropy strength meter with security checklist',
+      'Batch generation of 5 passwords simultaneously with separate copy buttons',
+    ],
+    faqs: [
+      {
+        question: 'Are generated passwords saved on your server?',
+        answer: 'Never. Passwords are generated directly inside your browser memory and are instantly cleared upon page refresh.',
+      },
+      {
+        question: 'What makes a password cryptographically secure?',
+        answer: 'Using true system entropy (via crypto.getRandomValues) ensures patterns cannot be guessed by automated rainbow tables or brute-force cracking algorithms.',
+      },
+    ],
+    relatedToolSlugs: ['qr-code-generator', 'color-picker', 'base64-encoder-decoder'],
+  },
+  {
+    id: 'color-picker',
+    slug: 'color-picker',
+    name: 'Color Picker & Converter',
+    tagline: 'HEX, RGB, HSL & WCAG Contrast Tool',
+    shortDescription: 'Pick colors visually, convert across HEX, RGB, HSL, and CMYK formats, extract image palettes, and verify WCAG contrast.',
+    longDescription: 'The MultiZest Color Picker & Converter provides an all-in-one color management workspace for web designers and front-end developers. Pick colors using visual gradient swatches, inspect equivalent values across HEX, RGB, HSL, and CMYK, extract dominant palettes from any uploaded picture, and audit accessibility contrast ratios to comply with WCAG 2.1 AA/AAA guidelines.',
+    category: 'generator-tools',
+    categoryName: 'Generator Tools',
+    iconName: 'Palette',
+    badge: 'Creative',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 340,
+    howToSteps: [
+      {
+        title: 'Pick or Enter Color Value',
+        description: 'Use the interactive visual picker or type a HEX, RGB, or HSL code to synchronize all formats.',
+      },
+      {
+        title: 'Extract from Image (Optional)',
+        description: 'Upload any photo or UI mockup to extract its dominant palette and sample colors with the eyedropper.',
+      },
+      {
+        title: 'Check Accessibility Contrast',
+        description: 'Enter your background and foreground colors to view the real-time WCAG contrast ratio score.',
+      },
+      {
+        title: 'Copy Color Formats',
+        description: 'Copy HEX, CSS rgb(), or hsl() strings with a single click.',
+      },
+    ],
+    features: [
+      'Bidirectional synchronization between HEX, RGB, HSL, and CMYK color spaces',
+      'Upload image to extract dominant color palettes and eyedropper sampling',
+      'Integrated WCAG 2.1 contrast ratio checker with AA and AAA compliance badges',
+      'Color history tracking the last 10 sampled hues in localStorage',
+      'One-click format copying for CSS and graphic design workflows',
+    ],
+    faqs: [
+      {
+        question: 'What is WCAG contrast compliance?',
+        answer: 'The Web Content Accessibility Guidelines require a contrast ratio of at least 4.5:1 for normal body text and 3:1 for large headers to ensure readability for visually impaired individuals.',
+      },
+      {
+        question: 'Can I extract brand colors from client logos?',
+        answer: 'Yes! Drop any PNG or JPG logo into the "Extract from Image" zone to instantly view its primary color swatches.',
+      },
+    ],
+    relatedToolSlugs: ['qr-code-generator', 'image-converter', 'json-formatter'],
+  },
+
+  // DEVELOPER TOOLS (3)
+  {
+    id: 'json-formatter',
+    slug: 'json-formatter',
+    name: 'JSON Formatter & Validator',
+    tagline: 'Beautify, Minify & Validate JSON Online',
+    shortDescription: 'Format, beautify, minify, and validate JSON data with syntax highlighting, error line numbers, and collapsible tree view.',
+    longDescription: 'The MultiZest JSON Formatter & Validator streamlines API debugging, configuration file editing, and data inspection. Paste raw or compressed JSON to format it with 2-space, 4-space, or tab indentation, view an interactive collapsible tree diagram, identify syntax parsing errors down to exact line numbers, or minify payloads for production delivery.',
+    category: 'developer-tools',
+    categoryName: 'Developer Tools',
+    iconName: 'Braces',
+    badge: 'Dev',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 520,
+    howToSteps: [
+      {
+        title: 'Paste Raw JSON',
+        description: 'Paste your unformatted JSON payload, API response, or configuration file into the editor.',
+      },
+      {
+        title: 'Beautify or Minify',
+        description: 'Click "Format / Beautify" for clean indentation or "Minify" to strip whitespace.',
+      },
+      {
+        title: 'Inspect Errors or Tree View',
+        description: 'Review instant syntax validation with line numbers or toggle the collapsible tree view.',
+      },
+      {
+        title: 'Copy or Save',
+        description: 'Copy the formatted code with one click.',
+      },
+    ],
+    features: [
+      'Beautify JSON with configurable indentation: 2 spaces, 4 spaces, or Tabs',
+      'Minify JSON to a compact single-line string for production APIs',
+      'Line-accurate syntax error validation highlighting unclosed brackets and missing quotes',
+      'Interactive collapsible tree view for exploring deeply nested objects and arrays',
+      'Real-time payload metrics: total keys, nesting depth, and character count',
+    ],
+    faqs: [
+      {
+        question: 'Is my proprietary JSON data sent to any third party?',
+        answer: 'No. Parsing is handled exclusively inside your browser via native JSON.parse and JSON.stringify. Zero data leaves your computer.',
+      },
+      {
+        question: 'Why does JSON show a syntax error for single quotes?',
+        answer: 'The official JSON specification (RFC 8259) requires all object keys and string values to be enclosed in standard double quotes (").',
+      },
+    ],
+    relatedToolSlugs: ['base64-encoder-decoder', 'markdown-preview', 'word-counter'],
+  },
+  {
+    id: 'base64-encoder-decoder',
+    slug: 'base64-encoder-decoder',
+    name: 'Base64 Encoder / Decoder',
+    tagline: 'Encode & Decode Text and Files Online',
+    shortDescription: 'Encode text or binary files into Base64 strings, or decode Base64 back into readable text or downloadable files.',
+    longDescription: 'The MultiZest Base64 Encoder & Decoder converts strings and binary assets into ASCII-safe Base64 notation and back. Essential for web developers embedding images into CSS data URLs, sending binary attachments through text APIs, or decoding authentication tokens, this tool handles both UTF-8 strings and file uploads with instant conversion.',
+    category: 'developer-tools',
+    categoryName: 'Developer Tools',
+    iconName: 'Binary',
+    badge: 'Dev',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 310,
+    howToSteps: [
+      {
+        title: 'Select Mode: Text or File',
+        description: 'Choose Text mode for strings or File mode for pictures, documents, and icons.',
+      },
+      {
+        title: 'Choose Direction: Encode or Decode',
+        description: 'Toggle whether you want to encode into Base64 or decode from Base64.',
+      },
+      {
+        title: 'Enter Input or Drop File',
+        description: 'Type text or drop a file to process immediately.',
+      },
+      {
+        title: 'Copy String or Download File',
+        description: 'Copy the generated Base64 (with optional data: URI header) or download decoded files.',
+      },
+    ],
+    features: [
+      'Dual processing modes: Text strings and binary files (images, PDFs, documents)',
+      'Bidirectional conversion: Encode to Base64 and Decode from Base64',
+      'Data URL checkbox option (data:mime/type;base64,...) for CSS/HTML embedding',
+      'Decode Base64 strings directly into downloadable binary files',
+      '100% client-side FileReader execution with zero server latency',
+    ],
+    faqs: [
+      {
+        question: 'What is Base64 encoding used for?',
+        answer: 'Base64 allows binary data (such as images and audio) to be represented in pure ASCII characters, making it possible to transmit data over text-only protocols like JSON, email, and HTML.',
+      },
+      {
+        question: 'Is Base64 encryption?',
+        answer: 'No. Base64 is an encoding format, not an encryption cipher. Anyone can decode a Base64 string instantly.',
+      },
+    ],
+    relatedToolSlugs: ['json-formatter', 'markdown-preview', 'qr-code-generator'],
+  },
+  {
+    id: 'markdown-preview',
+    slug: 'markdown-preview',
+    name: 'Markdown Live Editor & Previewer',
+    tagline: 'Write & Preview Markdown Side-by-Side',
+    shortDescription: 'Write Markdown with real-time rendered HTML preview, formatting toolbar, and one-click HTML or .md export.',
+    longDescription: 'The MultiZest Markdown Preview tool provides a distraction-free, split-screen editor for composing README files, documentation guides, and blog drafts. Powered by GitHub-Flavored Markdown (GFM), compose headings, tables, task lists, code blocks, and blockquotes with instant side-by-side rendering and one-click HTML copying.',
+    category: 'developer-tools',
+    categoryName: 'Developer Tools',
+    iconName: 'FileCode',
+    badge: 'Editor',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 275,
+    howToSteps: [
+      {
+        title: 'Compose Markdown Text',
+        description: 'Type markdown syntax in the left panel or use the toolbar buttons for instant formatting.',
+      },
+      {
+        title: 'Examine Live Preview',
+        description: 'The right pane updates in real time with styled typography, tables, and highlighted code.',
+      },
+      {
+        title: 'Export in Desired Format',
+        description: 'Copy raw Markdown, copy rendered HTML, or download a .md file directly to your disk.',
+      },
+    ],
+    features: [
+      'Side-by-side split screen with synchronized responsive layout',
+      'Full GitHub Flavored Markdown (GFM) support: tables, strikethrough, task checklists, and code fences',
+      'One-click formatting toolbar for headings, bold, italic, links, images, quotes, and lists',
+      'Triple export modes: Copy Markdown, Copy compiled HTML, or Download .md file',
+      'Word count and character statistics integrated into the editor header',
+    ],
+    faqs: [
+      {
+        question: 'Can I use this for GitHub README.md files?',
+        answer: 'Yes! Our parser strictly complies with GitHub Flavored Markdown standards, ensuring your README renders identically on GitHub.',
+      },
+      {
+        question: 'Does the preview support code block syntax highlighting?',
+        answer: 'Yes, code blocks are styled cleanly with monospaced typography and dark surface contrast.',
+      },
+    ],
+    relatedToolSlugs: ['json-formatter', 'word-counter', 'case-converter'],
+  },
+
+  // CALCULATOR TOOLS (3)
+  {
+    id: 'age-calculator',
+    slug: 'age-calculator',
+    name: 'Exact Age Calculator',
+    tagline: 'Calculate Age in Years, Months, Days & Minutes',
+    shortDescription: 'Calculate your exact age or the time interval between any two dates with detailed breakdowns, birthday countdowns, and zodiac signs.',
+    longDescription: 'The MultiZest Exact Age Calculator determines chronological age down to the day, hour, and minute. Whether you want to know your exact age in total days, calculate the duration between historical dates, count down to your upcoming birthday, or discover which day of the week you were born on, calculate everything instantly with leap-year accuracy.',
+    category: 'calculator-tools',
+    categoryName: 'Calculator Tools',
+    iconName: 'Calendar',
+    badge: 'Popular',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 390,
+    howToSteps: [
+      {
+        title: 'Select Date of Birth',
+        description: 'Choose your birth date using the calendar picker or type it manually.',
+      },
+      {
+        title: 'Set Target Date (Optional)',
+        description: 'Defaults to today, or select any future or past date to calculate intervals.',
+      },
+      {
+        title: 'View Chronological Breakdown',
+        description: 'Inspect exact age in years, months, days, total weeks, hours, and minutes.',
+      },
+      {
+        title: 'Discover Birthday Countdown & Fun Facts',
+        description: 'See how many days until your next birthday, your birth day of the week, and zodiac sign.',
+      },
+    ],
+    features: [
+      'Exact age calculated in years, months, and days with calendar month variation accuracy',
+      'Total lifetime metric cards: Total Months, Weeks, Days, Hours, and Minutes lived',
+      'Real-time countdown timer to your next upcoming birthday celebration',
+      'Astrological Western Zodiac sign identification and day-of-week birth detection',
+      'Calculate duration between any two historical or future calendar dates',
+    ],
+    faqs: [
+      {
+        question: 'Does the calculator account for leap years and different month lengths?',
+        answer: 'Yes! It calculates astronomical day counts precisely, accurately accounting for February 29 leap days and 30 vs 31-day months.',
+      },
+      {
+        question: 'Can I calculate how many days until a future wedding or anniversary?',
+        answer: 'Yes! Simply select today as the start date and your event as the target date to calculate the exact remaining countdown.',
+      },
+    ],
+    relatedToolSlugs: ['percentage-calculator', 'bmi-calculator', 'word-counter'],
+  },
+  {
+    id: 'percentage-calculator',
+    slug: 'percentage-calculator',
+    name: 'Percentage Calculator',
+    tagline: 'Calculate Percentage Changes, Increases & Discounts',
+    shortDescription: 'Solve any percentage calculation easily: what is X% of Y, percentage increase/decrease, margin changes, and sales discounts.',
+    longDescription: 'The MultiZest Percentage Calculator takes the confusion out of everyday mathematical equations. Whether you are calculating store sales discounts, evaluating tipping percentages at restaurants, figuring out financial margin increases, or solving student algebra homework, select from 5 purpose-built percentage calculation modes with step-by-step formula explanations.',
+    category: 'calculator-tools',
+    categoryName: 'Calculator Tools',
+    iconName: 'Percent',
+    badge: 'Math',
+    featured: false,
+    rating: 4.9,
+    ratingCount: 460,
+    howToSteps: [
+      {
+        title: 'Choose Calculation Mode',
+        description: 'Select: "What is X% of Y", "X is what % of Y", "Percentage Change", "Percentage Increase", or "Percentage Decrease".',
+      },
+      {
+        title: 'Enter Numeric Values',
+        description: 'Type your numbers into the designated fields.',
+      },
+      {
+        title: 'See Instant Solution',
+        description: 'The answer updates in real time with step-by-step formula proofs.',
+      },
+    ],
+    features: [
+      '5 versatile calculation modes covering discounts, tipping, margins, and growth',
+      'Step-by-step formula explanations displayed underneath each solution',
+      'Live recalculation as you type without pressing enter or submit',
+      'Calculation history tracking recent problems in your session',
+      'Clean interface with large high-contrast numerals for rapid reference',
+    ],
+    faqs: [
+      {
+        question: 'How do I calculate a 20% discount on a $75 item?',
+        answer: 'Use the "Percentage Decrease" tab, enter 75 as the original value and 20 as the percentage to get the discounted price of $60 and $15 savings.',
+      },
+      {
+        question: 'How do I calculate percentage growth between two years?',
+        answer: 'Use the "Percentage Change" tab, enter the starting value and final value to see the exact percentage increase or drop.',
+      },
+    ],
+    relatedToolSlugs: ['age-calculator', 'bmi-calculator', 'word-counter'],
+  },
+  {
+    id: 'bmi-calculator',
+    slug: 'bmi-calculator',
+    name: 'BMI Calculator',
+    tagline: 'Calculate Body Mass Index Online',
+    shortDescription: 'Calculate your Body Mass Index (BMI) using metric or imperial units with visual health category scales and insights.',
+    longDescription: 'The MultiZest Body Mass Index (BMI) Calculator is a health and fitness screening utility that evaluates the relationship between your weight and height. Supporting both Metric (kg/cm) and Imperial (lbs/feet/inches) measurements, receive your official World Health Organization (WHO) BMI score, review where your number falls on the color-coded spectrum, and learn about healthy weight ranges.',
+    category: 'calculator-tools',
+    categoryName: 'Calculator Tools',
+    iconName: 'Activity',
+    badge: 'Health',
+    featured: false,
+    rating: 4.7,
+    ratingCount: 380,
+    howToSteps: [
+      {
+        title: 'Select Measurement System',
+        description: 'Toggle between Metric (kilograms and centimeters) or Imperial (pounds, feet, and inches).',
+      },
+      {
+        title: 'Enter Height and Weight',
+        description: 'Type your current physical metrics into the input boxes.',
+      },
+      {
+        title: 'Review Your BMI Score',
+        description: 'View your calculated score and see your visual placement on the color-coded category spectrum.',
+      },
+      {
+        title: 'Examine Reference Categories',
+        description: 'Compare your results against standard WHO categories: Underweight, Normal, Overweight, and Obese.',
+      },
+    ],
+    features: [
+      'Dual measurement units: Metric (kg, cm) and Imperial (lbs, ft, in) with instant conversion',
+      'Official WHO classification categories: Underweight (<18.5), Normal (18.5-24.9), Overweight (25-29.9), Obese (30+)',
+      'Visual spectrum gradient bar showing exact user positioning marker',
+      'Calculates ideal healthy weight boundaries tailored to your specific height',
+      'Privacy guaranteed: your health metrics are never tracked, logged, or uploaded',
+    ],
+    faqs: [
+      {
+        question: 'What is considered a normal healthy BMI?',
+        answer: 'According to the World Health Organization (WHO), a BMI between 18.5 and 24.9 is considered the normal, healthy range for adults.',
+      },
+      {
+        question: 'Is BMI accurate for athletes or bodybuilders?',
+        answer: 'BMI does not differentiate between dense muscle mass and adipose fat tissue. Muscular individuals may score in the overweight category despite having low body fat percentages.',
+      },
+    ],
+    relatedToolSlugs: ['age-calculator', 'percentage-calculator', 'word-counter'],
+  },
+];
+
+export function getToolBySlug(slug: string): ToolItem | undefined {
+  return TOOLS_DATA.find((tool) => tool.slug === slug);
+}
+
+export function getToolsByCategory(category: ToolCategory): ToolItem[] {
+  return TOOLS_DATA.filter((tool) => tool.category === category);
+}
+
+export function getRelatedTools(toolSlug: string, count = 3): ToolItem[] {
+  const current = getToolBySlug(toolSlug);
+  if (!current) return TOOLS_DATA.slice(0, count);
+  return current.relatedToolSlugs
+    .map((slug) => getToolBySlug(slug))
+    .filter((t): t is ToolItem => Boolean(t))
+    .slice(0, count);
+}
