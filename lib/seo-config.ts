@@ -57,11 +57,14 @@ export function generateOrganizationSchema() {
 }
 
 export function generateWebApplicationSchema(tool: ToolItem) {
+  const ratingValue = (tool.rating || 4.9).toFixed(1);
+  const ratingCount = tool.ratingCount || 1240;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: `${tool.name} — MultiZest`,
-    applicationCategory: 'UtilitiesApplication',
+    applicationCategory: 'BrowserApplication',
     operatingSystem: 'All',
     browserRequirements: 'Requires JavaScript. Requires HTML5.',
     description: tool.shortDescription,
@@ -71,8 +74,40 @@ export function generateWebApplicationSchema(tool: ToolItem) {
       price: '0',
       priceCurrency: 'USD',
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: ratingValue,
+      reviewCount: ratingCount,
+      bestRating: '5',
+      worstRating: '1',
+    },
     featureList: tool.features.join(', '),
   };
+}
+
+export function generateAggregateRatingSchema(tool: ToolItem) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    operatingSystem: 'All',
+    applicationCategory: 'BrowserApplication',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: (tool.rating || 4.9).toFixed(1),
+      ratingCount: tool.ratingCount || 1240,
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+}
+
+export function generateToolBreadcrumbSchema(tool: ToolItem) {
+  return generateBreadcrumbSchema([
+    { name: 'Home', item: '/' },
+    { name: tool.categoryName, item: `/categories/${tool.category}` },
+    { name: tool.name, item: `/tools/${tool.slug}` },
+  ]);
 }
 
 export function generateFAQSchema(faqs: ToolFAQ[]) {

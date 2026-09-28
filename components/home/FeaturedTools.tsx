@@ -26,13 +26,13 @@ export default function FeaturedTools() {
             href="/tools"
             className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
           >
-            <span>View All Tools</span>
+            <span>View All 31 Tools</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TOOLS_DATA.map((tool) => (
+          {TOOLS_DATA.filter((tool) => tool.featured).slice(0, 9).map((tool) => (
             <ToolCard key={tool.id} tool={tool} />
           ))}
         </div>

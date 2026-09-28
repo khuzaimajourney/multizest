@@ -12,18 +12,14 @@ import {
 } from 'lucide-react';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import AdPlaceholder from '@/components/shared/AdPlaceholder';
-import JsonLd from '@/components/shared/JsonLd';
+import SchemaInjector from '@/components/shared/SchemaInjector';
+import ToolErrorBoundary from '@/components/shared/ToolErrorBoundary';
 import ToolCard from '@/components/tools/ToolCard';
 import ToolRating from '@/components/tools/ToolRating';
 import ShareTool from '@/components/tools/ShareTool';
 import { ToolItem } from '@/lib/types';
 import { getRelatedTools } from '@/lib/tools-data';
 import { useToolHistory } from '@/hooks/useToolHistory';
-import {
-  generateWebApplicationSchema,
-  generateFAQSchema,
-  generateHowToSchema,
-} from '@/lib/seo-config';
 
 interface ToolLayoutProps {
   tool: ToolItem;
@@ -46,10 +42,8 @@ export default function ToolLayout({ tool, children }: ToolLayoutProps) {
 
   return (
     <>
-      {/* Structured Data */}
-      <JsonLd data={generateWebApplicationSchema(tool)} />
-      <JsonLd data={generateFAQSchema(tool.faqs)} />
-      <JsonLd data={generateHowToSchema(tool)} />
+      {/* 5x JSON-LD Structured Data Schema for Maximum SEO */}
+      <SchemaInjector tool={tool} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
         {/* Breadcrumb Navigation */}
@@ -109,7 +103,9 @@ export default function ToolLayout({ tool, children }: ToolLayoutProps) {
           {/* Main Interactive Tool Container */}
           <div className="lg:col-span-3">
             <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-4 sm:p-7 shadow-sm">
-              {children}
+              <ToolErrorBoundary toolName={tool.name}>
+                {children}
+              </ToolErrorBoundary>
             </div>
 
             {/* Ad Placement: Below Tool Interface */}
@@ -284,7 +280,7 @@ export default function ToolLayout({ tool, children }: ToolLayoutProps) {
               href="/tools"
               className="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
             >
-              <span>View All 20 Tools</span>
+              <span>View All 31 Tools</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

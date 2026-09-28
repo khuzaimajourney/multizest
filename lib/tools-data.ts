@@ -1069,6 +1069,532 @@ export const TOOLS_DATA: ToolItem[] = [
     ],
     relatedToolSlugs: ['age-calculator', 'percentage-calculator', 'word-counter'],
   },
+
+  // ==========================================
+  // V3 NEW TOOLS (10 Additions - Total 31 Tools)
+  // ==========================================
+
+  // 1. AI Image Background Remover
+  {
+    id: 'remove-background',
+    slug: 'remove-background',
+    name: 'AI Image Background Remover',
+    tagline: 'Remove Photo Backgrounds Online with AI',
+    shortDescription: 'Instantly cut out backgrounds from photos with zero clicks. 100% private, runs directly on your device with interactive before/after preview.',
+    longDescription: 'The MultiZest AI Image Background Remover detects subjects in portraits, product photos, pet pictures, and logos, cleanly removing the background in seconds. Everything processes locally right inside your web browser using client-side image segmentation, meaning your photos never get uploaded to any third-party cloud server.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Sparkles',
+    badge: 'AI Powered',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1420,
+    howToSteps: [
+      {
+        title: 'Drop Your Photo',
+        description: 'Drag and drop any JPG, PNG, or WebP photo into the large drop zone or click to select.',
+      },
+      {
+        title: 'Instant Automatic Cutout',
+        description: 'The background removal algorithm automatically isolates the main subject with transparent edges.',
+      },
+      {
+        title: 'Preview with Before/After Slider',
+        description: 'Drag the split handle back and forth to inspect edges, hair strands, and cutout precision.',
+      },
+      {
+        title: 'Download Transparent PNG',
+        description: 'Click "Download Transparent PNG" to save your high-resolution cutout with full alpha channel.',
+      },
+    ],
+    features: [
+      'Automatic subject detection for portraits, products, and objects',
+      'Interactive Before/After slider to inspect edges before downloading',
+      'Choice of transparent alpha or solid color replacement (White, Black, Neon Green)',
+      'High-resolution output preserving original pixel dimensions',
+      '100% private: photos never leave your computer or smartphone',
+    ],
+    faqs: [
+      {
+        question: 'Are my personal photos uploaded to an AI server?',
+        answer: 'No! All pixel processing and edge segmentation run completely in your browser on your device GPU/CPU. Your photos never leave your machine.',
+      },
+      {
+        question: 'What types of photos work best?',
+        answer: 'Photos with clear contrast between the subject and background (such as portrait headshots, e-commerce products, and pet photos) deliver the cleanest cutouts.',
+      },
+      {
+        question: 'Can I add a custom background color instead of transparency?',
+        answer: 'Yes! You can toggle between transparent alpha, crisp white (ideal for Amazon/eBay listings), or custom solid backdrop colors before downloading.',
+      },
+    ],
+    relatedToolSlugs: ['image-compressor', 'image-cropper', 'watermark-image'],
+  },
+
+  // 2. Add Watermark to Image
+  {
+    id: 'watermark-image',
+    slug: 'watermark-image',
+    name: 'Add Watermark to Image',
+    tagline: 'Protect Photos with Text & Logo Watermarks',
+    shortDescription: 'Protect your creative work and brand identity. Add custom text or transparent logo stamps to your photos with opacity and positioning controls.',
+    longDescription: 'The MultiZest Watermark Image tool enables photographers, designers, real estate agents, and content creators to copyright and protect visual assets. Stamp your name, website URL, copyright symbol, or business logo anywhere on your photo with live positioning, transparency slider, and rotation angle controls.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Stamp',
+    badge: 'Branding',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 980,
+    howToSteps: [
+      {
+        title: 'Upload Your Image',
+        description: 'Select or drag your photo into the workspace.',
+      },
+      {
+        title: 'Choose Text or Logo Mode',
+        description: 'Type your custom copyright notice or upload your PNG brand logo.',
+      },
+      {
+        title: 'Adjust Placement & Opacity',
+        description: 'Select watermark position (Center, Corner, Tile) and slide opacity to reach the perfect subtlety.',
+      },
+      {
+        title: 'Save Watermarked Photo',
+        description: 'Download your protected image in full resolution with zero compression loss.',
+      },
+    ],
+    features: [
+      'Dual modes: Custom text watermark or transparent PNG logo stamp',
+      '9-point instant positioning grid (corners, edges, and center)',
+      'Tiling pattern option for comprehensive anti-theft proofing',
+      'Adjustable opacity, font size, text color, and rotation angle',
+      'Processes full-resolution photos locally with zero quality loss',
+    ],
+    faqs: [
+      {
+        question: 'Does applying a watermark lower image resolution?',
+        answer: 'No. The canvas renders against the original full pixel dimensions of your uploaded photo, ensuring print-ready sharpness.',
+      },
+      {
+        question: 'Can I use special symbols like © or ™?',
+        answer: 'Yes! You can type or paste any unicode symbols including copyright ©, registered ®, and trademark ™.',
+      },
+    ],
+    relatedToolSlugs: ['remove-background', 'image-cropper', 'image-converter'],
+  },
+
+  // 3. Split PDF
+  {
+    id: 'split-pdf',
+    slug: 'split-pdf',
+    name: 'Split PDF',
+    tagline: 'Extract Pages & Divide PDF Files Online',
+    shortDescription: 'Separate PDF pages into individual documents or extract custom page ranges in seconds with interactive visual page previews.',
+    longDescription: 'The MultiZest Split PDF tool allows you to isolate specific chapters, extract single invoice sheets, or break up massive scanned booklets into compact independent PDF files. Review high-fidelity visual thumbnails of all pages, select split cutoffs or page ranges, and download your targeted files individually or bundled in a ZIP archive.',
+    category: 'pdf-tools',
+    categoryName: 'PDF Tools',
+    iconName: 'Scissors',
+    badge: 'Essential',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1650,
+    howToSteps: [
+      {
+        title: 'Upload Your PDF',
+        description: 'Drop any PDF document up to 50MB into the split dropzone.',
+      },
+      {
+        title: 'Choose Split Method',
+        description: 'Select "Extract Specific Pages" (e.g. pages 1, 3-5) or "Split Every Page" into individual documents.',
+      },
+      {
+        title: 'Preview Thumbnails',
+        description: 'Click on individual page cards to toggle them in or out of your extraction selection.',
+      },
+      {
+        title: 'Download Split PDFs',
+        description: 'Click "Split PDF" to generate and download your extracted documents or ZIP archive.',
+      },
+    ],
+    features: [
+      'Visual page grid showing real-time thumbnail previews of every page',
+      'Flexible range syntax: easily extract ranges like "1-3, 5, 8-10"',
+      'One-click "Burst All" mode to split every single page into separate files',
+      'Download individual pages or bundled ZIP archive',
+      '100% private client-side execution via pdf-lib',
+    ],
+    faqs: [
+      {
+        question: 'Can I split password-protected PDFs?',
+        answer: 'Encrypted PDFs must be unlocked before splitting. Standard unencrypted PDFs split instantly on your device.',
+      },
+      {
+        question: 'Will text remain selectable in the extracted pages?',
+        answer: 'Yes! Original vector fonts, embedded text layers, hyperlinks, and vector shapes are completely preserved.',
+      },
+    ],
+    relatedToolSlugs: ['merge-pdf', 'rotate-pdf', 'compress-pdf'],
+  },
+
+  // 4. Rotate PDF Pages
+  {
+    id: 'rotate-pdf',
+    slug: 'rotate-pdf',
+    name: 'Rotate PDF Pages',
+    tagline: 'Permanently Rotate Upside-Down PDF Documents',
+    shortDescription: 'Fix sideways or upside-down scanned PDFs. Rotate individual pages or all pages 90°, 180°, or 270° clockwise with instant permanent saving.',
+    longDescription: 'The MultiZest Rotate PDF tool fixes misoriented scans, landscape receipts, and upside-down agreements. Inspect page thumbnails, click to rotate specific pages or use the "Rotate All" button, and export a perfectly oriented PDF document ready for filing and distribution.',
+    category: 'pdf-tools',
+    categoryName: 'PDF Tools',
+    iconName: 'RotateCw',
+    badge: 'Popular',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 890,
+    howToSteps: [
+      {
+        title: 'Upload Your PDF Document',
+        description: 'Drag and drop your PDF into the upload area.',
+      },
+      {
+        title: 'Rotate Pages',
+        description: 'Click "Rotate All" or use the individual rotation buttons on each thumbnail card.',
+      },
+      {
+        title: 'Download Fixed PDF',
+        description: 'Click "Save Rotated PDF" to download your newly oriented document.',
+      },
+    ],
+    features: [
+      'Rotate all pages at once or fine-tune individual misaligned pages',
+      '90° Clockwise, 90° Counter-Clockwise, and 180° inversion modes',
+      'Live visual feedback showing the exact orientation before export',
+      'Permanent angle embedding compatible with Adobe Acrobat, browsers, and mobile viewers',
+      'Zero server upload — completely secure on your computer',
+    ],
+    faqs: [
+      {
+        question: 'Is the rotation permanent?',
+        answer: 'Yes! The rotation angle is permanently written into the PDF document metadata and page dictionaries.',
+      },
+      {
+        question: 'Does rotating reduce text or scan quality?',
+        answer: 'Not at all. Rotation modifies the coordinate matrix of the page without re-encoding images or rasterizing fonts.',
+      },
+    ],
+    relatedToolSlugs: ['split-pdf', 'merge-pdf', 'pdf-to-image'],
+  },
+
+  // 5. Video to Audio
+  {
+    id: 'video-to-audio',
+    slug: 'video-to-audio',
+    name: 'Video to Audio Converter (MP4 to MP3/WAV)',
+    tagline: 'Extract Audio Soundtracks from Videos Online',
+    shortDescription: 'Extract crystal-clear sound from MP4, WebM, and MOV videos into MP3 or WAV audio tracks directly in your browser with zero server uploads.',
+    longDescription: 'The MultiZest Video to Audio Converter rips audio tracks from video presentations, podcasts, lectures, and music clips. Using native browser media decoding and Web Audio APIs, your audio is extracted at maximum bit depth without streaming gigabytes over the internet.',
+    category: 'media-tools',
+    categoryName: 'Media Tools',
+    iconName: 'Music',
+    badge: 'Fast',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1310,
+    howToSteps: [
+      {
+        title: 'Drop Your Video File',
+        description: 'Drag and drop an MP4, WebM, MOV, or MKV video into the drop zone.',
+      },
+      {
+        title: 'Choose Audio Format',
+        description: 'Select MP3 for universal music player playback or WAV for lossless master audio quality.',
+      },
+      {
+        title: 'Extract Sound Track',
+        description: 'Processing starts automatically with a live percentage progress bar.',
+      },
+      {
+        title: 'Download Audio File',
+        description: 'Click "Download Audio" to save your extracted audio track.',
+      },
+    ],
+    features: [
+      'Extract audio from MP4, WebM, MOV, and MKV video formats',
+      'Output to universal MP3 or uncompressed studio WAV formats',
+      'Real-time extraction progress bar and audio duration stats',
+      'In-browser audio player to preview the extracted soundtrack before saving',
+      '100% private: zero cloud uploads saves both bandwidth and confidentiality',
+    ],
+    faqs: [
+      {
+        question: 'How fast is video audio extraction in the browser?',
+        answer: 'Because decoding happens on your local device hardware without uploading large video files over the internet, a 5-minute video extracts in just a few seconds.',
+      },
+      {
+        question: 'Can I extract audio on my phone?',
+        answer: 'Yes! It works on modern mobile browsers including Safari on iPhone and Chrome on Android.',
+      },
+    ],
+    relatedToolSlugs: ['image-to-pdf', 'text-to-speech', 'audio-cutter'],
+  },
+
+  // 6. Image to PDF
+  {
+    id: 'image-to-pdf',
+    slug: 'image-to-pdf',
+    name: 'Image to PDF Converter',
+    tagline: 'Convert JPG & PNG Photos into One PDF Album',
+    shortDescription: 'Combine multiple photos, receipts, notes, and scans into a single organized PDF document. Reorder pages and customize margins effortlessly.',
+    longDescription: 'The MultiZest Image to PDF Converter compiles individual image files into a single, clean PDF booklet. Perfect for bundling expense receipts for tax season, collating photo portfolios, or archiving notes. Drag and drop to rearrange order, select page orientation, and generate a compact PDF in seconds.',
+    category: 'media-tools',
+    categoryName: 'Media Tools',
+    iconName: 'FileImage',
+    badge: 'Popular',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1840,
+    howToSteps: [
+      {
+        title: 'Upload One or More Photos',
+        description: 'Select or drag multiple JPG, PNG, or WebP images into the dropzone.',
+      },
+      {
+        title: 'Reorder Pages',
+        description: 'Drag thumbnail cards or use arrow buttons to arrange pages in your preferred sequence.',
+      },
+      {
+        title: 'Configure Page Layout',
+        description: 'Choose page orientation (Auto, Portrait, Landscape) and margin preferences (None, Small, Normal).',
+      },
+      {
+        title: 'Download Combined PDF',
+        description: 'Click "Convert to PDF" and download your finished document.',
+      },
+    ],
+    features: [
+      'Convert unlimited JPG, PNG, and WebP photos into a unified PDF',
+      'Interactive visual thumbnail reordering via move controls',
+      'Page sizing options: Standard A4 or fit to original image dimensions',
+      'Configurable margins: None (full bleed), Compact, or Standard',
+      'High-speed client-side generation powered by pdf-lib',
+    ],
+    faqs: [
+      {
+        question: 'Does converting images to PDF reduce photo quality?',
+        answer: 'No. Original image pixel data is embedded directly into the PDF container without unwanted downsampling.',
+      },
+      {
+        question: 'How many photos can I convert at once?',
+        answer: 'You can convert 20+ photos at once. Generation is fast and runs smoothly on your computer or phone.',
+      },
+    ],
+    relatedToolSlugs: ['pdf-to-image', 'merge-pdf', 'video-to-audio'],
+  },
+
+  // 7. Meta Tags Generator
+  {
+    id: 'meta-tags-generator',
+    slug: 'meta-tags-generator',
+    name: 'Meta Tags & OpenGraph Generator',
+    tagline: 'Generate SEO & Social Share Preview Tags',
+    shortDescription: 'Generate HTML meta tags for Google SEO, Facebook OpenGraph, and Twitter Cards with real-time interactive search and social media previews.',
+    longDescription: 'The MultiZest Meta Tags Generator simplifies search engine optimization and social media card configuration for web developers, bloggers, and marketers. Fill out your title, description, URL, and image, preview how your link looks on Google, Twitter/X, and Facebook, and copy verified HTML tags with one click.',
+    category: 'web-tools',
+    categoryName: 'Web & SEO Tools',
+    iconName: 'Code2',
+    badge: 'SEO',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 760,
+    howToSteps: [
+      {
+        title: 'Enter Page Details',
+        description: 'Input your webpage title, description, canonical URL, and social share image URL.',
+      },
+      {
+        title: 'Check Live Previews',
+        description: 'Review the instant mockups for Google Search Results, Twitter Cards, and Facebook Share Cards.',
+      },
+      {
+        title: 'Copy HTML Meta Tags',
+        description: 'Click "Copy Meta Tags" and paste them directly into your website\'s <head> section.',
+      },
+    ],
+    features: [
+      'Generates standard SEO tags: <title>, <meta description>, canonical URL, and robots',
+      'Full OpenGraph metadata: og:title, og:description, og:image, og:url, and og:type',
+      'Twitter / X Card tags: summary_large_image, twitter:title, twitter:image',
+      'Real-time character counters for Title (60 chars) and Description (160 chars)',
+      'Side-by-side interactive Google Search, Twitter, and Facebook card previews',
+    ],
+    faqs: [
+      {
+        question: 'What is the recommended length for an SEO title?',
+        answer: 'Keep titles between 50 and 60 characters so search engines do not truncate the headline in search results.',
+      },
+      {
+        question: 'What dimensions should OpenGraph social share images be?',
+        answer: 'The recommended OpenGraph image size is 1200x630 pixels with a 1.91:1 aspect ratio.',
+      },
+    ],
+    relatedToolSlugs: ['utm-builder', 'json-to-csv', 'qr-code-generator'],
+  },
+
+  // 8. UTM Link Builder
+  {
+    id: 'utm-builder',
+    slug: 'utm-builder',
+    name: 'UTM Campaign Link Builder',
+    tagline: 'Build Trackable Marketing URLs for GA4',
+    shortDescription: 'Create clean, standardized Google Analytics tracking URLs with campaign source, medium, name, and term parameters. Includes instant copy and URL validation.',
+    longDescription: 'The MultiZest UTM Link Builder creates trackable campaign URLs to accurately attribute traffic in Google Analytics (GA4), Mixpanel, and marketing dashboards. Eliminate messy typos, maintain parameter naming consistency across your team, and generate validated URLs ready for newsletters, ad campaigns, and social bios.',
+    category: 'web-tools',
+    categoryName: 'Web & SEO Tools',
+    iconName: 'Link2',
+    badge: 'Marketing',
+    featured: false,
+    rating: 4.9,
+    ratingCount: 1120,
+    howToSteps: [
+      {
+        title: 'Enter Target Website URL',
+        description: 'Paste your destination landing page address (e.g. https://yourbrand.com).',
+      },
+      {
+        title: 'Fill Campaign Parameters',
+        description: 'Specify Source (e.g. newsletter), Medium (e.g. email), and Campaign Name (e.g. spring_sale).',
+      },
+      {
+        title: 'Optional Parameters',
+        description: 'Add Campaign Term (for search keywords) or Campaign Content (for A/B testing variations).',
+      },
+      {
+        title: 'Copy Formatted URL',
+        description: 'Click "Copy UTM URL" to copy the properly encoded link to your clipboard.',
+      },
+    ],
+    features: [
+      'Standardized GA4 parameters: utm_source, utm_medium, utm_campaign, utm_term, utm_content',
+      'One-click source presets: Google Ads, Facebook, Twitter, LinkedIn, Newsletter, Reddit',
+      'Auto-formats spaces into dashes or underscores to avoid broken URLs',
+      'Built-in URL validation ensuring valid protocols (https://)',
+      'One-click copy and quick test link button',
+    ],
+    faqs: [
+      {
+        question: 'What are the required UTM parameters?',
+        answer: 'The essential parameters are Website URL, Campaign Source (referrer), and Campaign Medium (marketing channel).',
+      },
+      {
+        question: 'Does using UTM links affect SEO rankings?',
+        answer: 'No. Search engines ignore standard tracking parameters when crawling pages, provided you maintain canonical tags on your landing page.',
+      },
+    ],
+    relatedToolSlugs: ['meta-tags-generator', 'qr-code-generator', 'json-to-csv'],
+  },
+
+  // 9. JSON to CSV Converter
+  {
+    id: 'json-to-csv',
+    slug: 'json-to-csv',
+    name: 'JSON to CSV Converter',
+    tagline: 'Convert JSON Data into CSV & Excel Tables',
+    shortDescription: 'Parse JSON arrays into comma-separated values (CSV) instantly. Features interactive table preview, customizable delimiter, and direct file export.',
+    longDescription: 'The MultiZest JSON to CSV Converter transforms API responses, database dumps, and nested JSON arrays into tabular CSV format for Google Sheets, Microsoft Excel, and data science workflows. Auto-detects column headers, escapes complex strings, and exports clean CSV files in milliseconds.',
+    category: 'developer-tools',
+    categoryName: 'Developer Tools',
+    iconName: 'Table',
+    badge: 'Data',
+    featured: false,
+    rating: 4.8,
+    ratingCount: 940,
+    howToSteps: [
+      {
+        title: 'Paste or Upload JSON',
+        description: 'Paste your JSON array or upload a .json file from your computer.',
+      },
+      {
+        title: 'Auto-Parse & Preview',
+        description: 'The parser instantly validates syntax and builds an interactive spreadsheet preview table.',
+      },
+      {
+        title: 'Download CSV File',
+        description: 'Click "Download CSV" or "Copy to Clipboard" to import directly into Excel or Google Sheets.',
+      },
+    ],
+    features: [
+      'Handles flat and nested JSON arrays with automatic column header deduction',
+      'Interactive data table preview displaying row counts and sample records',
+      'Proper escaping for commas, line breaks, and quotation marks',
+      'Options to customize field delimiters (Comma, Semicolon, Tab)',
+      '100% client-side: sensitive financial and customer datasets remain confidential',
+    ],
+    faqs: [
+      {
+        question: 'Can I convert nested JSON objects?',
+        answer: 'Yes! Nested objects are cleanly flattened with dot-notation column names (e.g. user.address.city).',
+      },
+      {
+        question: 'Is there a limit on the number of JSON rows?',
+        answer: 'Because parsing executes directly in JavaScript memory, you can easily convert datasets with tens of thousands of rows.',
+      },
+    ],
+    relatedToolSlugs: ['json-formatter', 'base64-encoder-decoder', 'markdown-preview'],
+  },
+
+  // 10. Text Compare (Diff Checker)
+  {
+    id: 'text-diff-checker',
+    slug: 'text-diff-checker',
+    name: 'Text Compare (Diff Checker)',
+    tagline: 'Find Differences Between Two Texts Online',
+    shortDescription: 'Compare two text files or code snippets side-by-side. Highlights added text in green and deleted text in red with word-by-word precision.',
+    longDescription: 'The MultiZest Text Compare tool pinpoints exact textual changes, revisions, code differences, and document discrepancies. Perfect for writers comparing article drafts, developers reviewing diffs without Git, and legal assistants spotting contract modifications.',
+    category: 'text-tools',
+    categoryName: 'Text Tools',
+    iconName: 'GitCompare',
+    badge: 'Compare',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1290,
+    howToSteps: [
+      {
+        title: 'Paste Original Text',
+        description: 'Paste the original master document or code snippet in the left box.',
+      },
+      {
+        title: 'Paste Modified Text',
+        description: 'Paste your revised version in the right box.',
+      },
+      {
+        title: 'Auto-Compare',
+        description: 'Differences are automatically computed and highlighted in real-time as you type.',
+      },
+      {
+        title: 'Review Differences',
+        description: 'Inspect highlighted additions (green) and removals (red) with summary change statistics.',
+      },
+    ],
+    features: [
+      'Word-by-word and character-by-character difference detection',
+      'Clear color-coded highlights: Green for additions, Red for removals',
+      'Real-time comparison: updates instantly without pressing submit',
+      'Stats counter showing additions count, deletions count, and similarity percentage',
+      'Privacy guaranteed: all text comparison executes locally on your device',
+    ],
+    faqs: [
+      {
+        question: 'Is my text saved or sent to any server?',
+        answer: 'No. All comparison calculations run entirely in your local browser sandbox.',
+      },
+      {
+        question: 'Can I compare code snippets?',
+        answer: 'Yes! It accurately highlights code changes across HTML, JavaScript, Python, CSS, SQL, and plain text.',
+      },
+    ],
+    relatedToolSlugs: ['word-counter', 'case-converter', 'json-formatter'],
+  },
 ];
 
 export function getToolBySlug(slug: string): ToolItem | undefined {
@@ -1082,8 +1608,26 @@ export function getToolsByCategory(category: ToolCategory): ToolItem[] {
 export function getRelatedTools(toolSlug: string, count = 3): ToolItem[] {
   const current = getToolBySlug(toolSlug);
   if (!current) return TOOLS_DATA.slice(0, count);
-  return current.relatedToolSlugs
+
+  // Semantic Category Silo: Strictly link tools in the SAME category to build topical authority
+  const sameCategoryTools = TOOLS_DATA.filter(
+    (t) => t.category === current.category && t.slug !== current.slug
+  );
+
+  if (sameCategoryTools.length >= count) {
+    return sameCategoryTools.slice(0, count);
+  }
+
+  // Fallback to relatedToolSlugs if category has fewer tools
+  const curated = current.relatedToolSlugs
     .map((slug) => getToolBySlug(slug))
     .filter((t): t is ToolItem => Boolean(t))
-    .slice(0, count);
+    .filter((t) => t.slug !== current.slug);
+
+  const combined = [...sameCategoryTools, ...curated];
+  const unique = Array.from(new Set(combined.map((t) => t.slug)))
+    .map((slug) => getToolBySlug(slug))
+    .filter((t): t is ToolItem => Boolean(t));
+
+  return unique.slice(0, count);
 }

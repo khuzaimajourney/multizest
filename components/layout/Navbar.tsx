@@ -115,9 +115,9 @@ export default function Navbar() {
             {isToolsOpen && (
               <div
                 onMouseLeave={() => setIsToolsOpen(false)}
-                className="absolute left-0 mt-2 w-[540px] rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+                className="absolute left-0 mt-2 w-[720px] max-h-[550px] overflow-y-auto rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-150"
               >
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                   {TOOL_CATEGORIES.map((cat) => {
                     const categoryTools = TOOLS_DATA.filter((t) => t.category === cat.id);
                     return (
@@ -156,7 +156,7 @@ export default function Navbar() {
                     href="/tools"
                     className="font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
                   >
-                    <span>View All Tools</span>
+                    <span>View All 31 Tools</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

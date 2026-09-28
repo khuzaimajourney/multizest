@@ -3,7 +3,7 @@ import { ShieldCheck, Smartphone, CheckCircle, Zap } from 'lucide-react';
 
 export default function StatsSection() {
   const stats = [
-    { value: '5+', label: 'Free Online Tools', sublabel: 'Growing weekly' },
+    { value: '30+', label: 'Free Online Tools', sublabel: 'Client-side privacy' },
     { value: '100%', label: 'Browser-Based', sublabel: 'Local execution' },
     { value: '0', label: 'Sign-Ups Required', sublabel: 'Start instantly' },
     { value: '< 1s', label: 'Processing Speed', sublabel: 'Zero queue delay' },

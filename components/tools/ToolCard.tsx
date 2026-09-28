@@ -27,6 +27,15 @@ import {
   Sparkles,
   Heart,
   Star,
+  Scissors,
+  RotateCw,
+  Stamp,
+  Music,
+  FileImage,
+  Code2,
+  Link2,
+  Table,
+  GitCompare,
 } from 'lucide-react';
 import { ToolItem } from '@/lib/types';
 import { useFavorites } from '@/hooks/useFavorites';
@@ -93,6 +102,26 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
         return <Percent className="w-5 h-5 text-pink-500" />;
       case 'Activity':
         return <Activity className="w-5 h-5 text-red-500" />;
+
+      // New V3 Tools
+      case 'Scissors':
+        return <Scissors className="w-5 h-5 text-indigo-500" />;
+      case 'RotateCw':
+        return <RotateCw className="w-5 h-5 text-blue-500" />;
+      case 'Stamp':
+        return <Stamp className="w-5 h-5 text-violet-500" />;
+      case 'Music':
+        return <Music className="w-5 h-5 text-fuchsia-500" />;
+      case 'FileImage':
+        return <FileImage className="w-5 h-5 text-pink-500" />;
+      case 'Code2':
+        return <Code2 className="w-5 h-5 text-sky-500" />;
+      case 'Link2':
+        return <Link2 className="w-5 h-5 text-indigo-500" />;
+      case 'Table':
+        return <Table className="w-5 h-5 text-teal-500" />;
+      case 'GitCompare':
+        return <GitCompare className="w-5 h-5 text-amber-500" />;
 
       default:
         return <Sparkles className="w-5 h-5 text-blue-500" />;
