@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy — MultiZest',
     description: 'Read the complete MultiZest Privacy Policy.',
-    url: 'https://multizest.com/privacy-policy',
+    url: '/privacy-policy',
   },
   alternates: {
-    canonical: 'https://multizest.com/privacy-policy',
+    canonical: '/privacy-policy',
   },
 };
 

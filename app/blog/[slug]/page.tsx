@@ -37,10 +37,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      url: `https://multizest.com/blog/${post.slug}`,
+      url: `/blog/${post.slug}`,
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(post.title)}&category=Blog+Post&desc=${encodeURIComponent(post.description)}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     alternates: {
-      canonical: `https://multizest.com/blog/${post.slug}`,
+      canonical: `/blog/${post.slug}`,
     },
   };
 }

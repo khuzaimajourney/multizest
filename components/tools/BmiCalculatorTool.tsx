@@ -232,7 +232,7 @@ Healthy Weight Range: ${results.healthyWeightText}
 Status: ${results.weightDiffText}
 Daily BMR: ~${results.bmr} kcal/day
 Recommended Daily Water: ~${results.waterLiters} Liters
-Calculated free at MultiZest: https://multizest.com/tools/bmi-calculator`;
+Calculated free at MultiZest: https://multizest.vercel.app/tools/bmi-calculator`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);

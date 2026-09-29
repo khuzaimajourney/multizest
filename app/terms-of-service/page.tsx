@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms of Service — MultiZest',
     description: 'Read the official Terms of Service governing the use of MultiZest.',
-    url: 'https://multizest.com/terms-of-service',
+    url: '/terms-of-service',
   },
   alternates: {
-    canonical: 'https://multizest.com/terms-of-service',
+    canonical: '/terms-of-service',
   },
 };
 

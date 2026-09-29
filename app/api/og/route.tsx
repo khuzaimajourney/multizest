@@ -198,7 +198,7 @@ export async function GET(request: NextRequest) {
                 letterSpacing: '-0.5px',
               }}
             >
-              multizest.com
+              multizest.vercel.app
             </span>
           </div>
         </div>

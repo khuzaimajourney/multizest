@@ -23,7 +23,7 @@ export default function QrCodeTool() {
   const [payloadType, setPayloadType] = useState<PayloadType>('url');
 
   // Input states
-  const [urlVal, setUrlVal] = useState('https://multizest.com');
+  const [urlVal, setUrlVal] = useState('https://multizest.vercel.app');
   const [textVal, setTextVal] = useState('Welcome to MultiZest!');
   const [wifiSsid, setWifiSsid] = useState('MyHomeWiFi');
   const [wifiPass, setWifiPass] = useState('');
@@ -54,7 +54,7 @@ export default function QrCodeTool() {
     const getPayload = (): string => {
       switch (payloadType) {
         case 'url':
-          return urlVal.trim() || 'https://multizest.com';
+          return urlVal.trim() || 'https://multizest.vercel.app';
         case 'text':
           return textVal || 'MultiZest';
         case 'wifi': {
@@ -70,7 +70,7 @@ export default function QrCodeTool() {
         case 'phone':
           return `tel:${phoneVal.replace(/\s+/g, '')}`;
         default:
-          return 'https://multizest.com';
+          return 'https://multizest.vercel.app';
       }
     };
 

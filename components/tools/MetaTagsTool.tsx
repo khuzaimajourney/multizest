@@ -16,8 +16,8 @@ export default function MetaTagsTool() {
   const [description, setDescription] = useState(
     'Fast, private, and free browser-based tools to compress images, convert PDFs, and generate QR codes with zero server uploads.'
   );
-  const [url, setUrl] = useState('https://multizest.com');
-  const [imageUrl, setImageUrl] = useState('https://multizest.com/api/og');
+  const [url, setUrl] = useState('https://multizest.vercel.app');
+  const [imageUrl, setImageUrl] = useState('https://multizest.vercel.app/api/og');
   const [siteName, setSiteName] = useState('MultiZest');
   const [twitterHandle, setTwitterHandle] = useState('@multizest');
   const [previewTab, setPreviewTab] = useState<'google' | 'twitter' | 'facebook'>('google');

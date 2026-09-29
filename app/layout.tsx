@@ -45,7 +45,10 @@ export const metadata: Metadata = {
     creator: SITE_CONFIG.twitterHandle,
   },
   alternates: {
-    canonical: SITE_CONFIG.url,
+    canonical: '/',
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'oTCXYUYWh7C_hM6Lc3yZjtGGJ_q8I5IH6CL-tpgvkoY',
   },
   icons: {
     icon: [
@@ -80,6 +83,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="google-site-verification"
+          content="oTCXYUYWh7C_hM6Lc3yZjtGGJ_q8I5IH6CL-tpgvkoY"
+        />
         {/* Anti-flash theme inline script */}
         <script
           dangerouslySetInnerHTML={{

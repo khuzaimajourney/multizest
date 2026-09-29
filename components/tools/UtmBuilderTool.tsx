@@ -13,7 +13,7 @@ import { fireSuccessConfetti } from '@/lib/confetti';
 import InteractiveTooltip from '@/components/shared/InteractiveTooltip';
 
 export default function UtmBuilderTool() {
-  const [websiteUrl, setWebsiteUrl] = useState('https://multizest.com');
+  const [websiteUrl, setWebsiteUrl] = useState('https://multizest.vercel.app');
   const [utmSource, setUtmSource] = useState('newsletter');
   const [utmMedium, setUtmMedium] = useState('email');
   const [utmCampaign, setUtmCampaign] = useState('spring_launch');

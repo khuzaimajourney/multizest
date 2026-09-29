@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'DMCA Policy — MultiZest',
     description: 'Read the Digital Millennium Copyright Act (DMCA) policy for MultiZest.',
-    url: 'https://multizest.com/dmca',
+    url: '/dmca',
   },
   alternates: {
-    canonical: 'https://multizest.com/dmca',
+    canonical: '/dmca',
   },
 };
 

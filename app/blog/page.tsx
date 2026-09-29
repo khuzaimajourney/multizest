@@ -13,10 +13,18 @@ export const metadata: Metadata = {
     title: 'Blog & Practical Guides — MultiZest',
     description:
       'Read in-depth guides, productivity tutorials, and performance optimization articles for web developers, creators, and students.',
-    url: 'https://multizest.com/blog',
+    url: '/blog',
+    images: [
+      {
+        url: '/api/og?title=MultiZest+Blog&category=Guides&desc=In-depth+tutorials+and+performance+guides.',
+        width: 1200,
+        height: 630,
+        alt: 'MultiZest Blog',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://multizest.com/blog',
+    canonical: '/blog',
   },
 };
 

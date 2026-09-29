@@ -29,10 +29,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${cat.name} — MultiZest`,
       description: cat.description,
-      url: `https://multizest.com/categories/${cat.slug}`,
+      url: `/categories/${cat.slug}`,
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(cat.name)}&category=Category&desc=${encodeURIComponent(cat.description)}`,
+          width: 1200,
+          height: 630,
+          alt: `${cat.name} - MultiZest`,
+        },
+      ],
     },
     alternates: {
-      canonical: `https://multizest.com/categories/${cat.slug}`,
+      canonical: `/categories/${cat.slug}`,
     },
   };
 }

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     title: 'About MultiZest — Your Trusted Online Tool Platform',
     description:
       'Learn about MultiZest, our core mission to provide free, fast, and 100% privacy-focused online tools.',
-    url: 'https://multizest.com/about',
+    url: '/about',
   },
   alternates: {
-    canonical: 'https://multizest.com/about',
+    canonical: '/about',
   },
 };
 

@@ -1,10 +1,15 @@
+import type { Metadata } from 'next';
 import { ToolItem, ToolFAQ, BlogPost } from './types';
+import { getToolBySlug } from './tools-data';
+
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://multizest.vercel.app';
 
 export const SITE_CONFIG = {
   name: 'MultiZest',
   tagline: 'Your All-in-One Online Toolbox — Fast, Free & Easy',
   description: 'MultiZest is your all-in-one free online toolbox. Fast, private, browser-based tools to compress images, convert PDFs, generate QR codes, count words, and resize images.',
-  url: 'https://multizest.com',
+  url: SITE_URL,
   keywords: [
     'free online tools',
     'PDF to image',
@@ -20,6 +25,70 @@ export const SITE_CONFIG = {
   twitterHandle: '@multizest',
   contactEmail: 'khuzaimajourney@gmail.com',
 };
+
+export function buildToolMetadata(slug: string): Metadata {
+  const tool = getToolBySlug(slug);
+  if (!tool) {
+    return {
+      title: 'Free Online Tool | MultiZest',
+      description: 'Free, fast, and secure browser-based tool with zero server uploads.',
+    };
+  }
+
+  const ogImageUrl = `/api/og?title=${encodeURIComponent(tool.name)}&category=${encodeURIComponent(tool.categoryName)}&desc=${encodeURIComponent(tool.shortDescription)}`;
+
+  return {
+    title: `${tool.name} — Free Online Tool | MultiZest`,
+    description: tool.shortDescription,
+    keywords: [
+      tool.name.toLowerCase(),
+      `${tool.name.toLowerCase()} online free`,
+      `${tool.name.toLowerCase()} converter`,
+      tool.categoryName.toLowerCase(),
+      'free browser tool',
+      'client side privacy',
+      'no file upload',
+      'multizest',
+    ],
+    alternates: {
+      canonical: `/tools/${tool.slug}`,
+    },
+    openGraph: {
+      title: `${tool.name} — Free Online Tool | MultiZest`,
+      description: tool.shortDescription,
+      url: `/tools/${tool.slug}`,
+      siteName: SITE_CONFIG.name,
+      locale: 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${tool.name} — MultiZest`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${tool.name} — Free Online Tool | MultiZest`,
+      description: tool.shortDescription,
+      creator: SITE_CONFIG.twitterHandle,
+      images: [ogImageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
 
 export function generateWebsiteSchema() {
   return {

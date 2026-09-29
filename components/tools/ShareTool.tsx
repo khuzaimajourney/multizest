@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Share2, Check, Copy } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/seo-config';
 
 interface ShareToolProps {
   title: string;
@@ -12,7 +13,7 @@ export default function ShareTool({ title, url }: ShareToolProps) {
   const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : (url || 'https://multizest.com');
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : (url || SITE_CONFIG.url);
   const shareText = `Check out this free tool on MultiZest: ${title}`;
 
   const handleCopyLink = async () => {
