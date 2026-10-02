@@ -4,27 +4,47 @@ import { Clock, Calendar, ArrowRight, BookOpen } from 'lucide-react';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import AdPlaceholder from '@/components/shared/AdPlaceholder';
 import { BLOG_POSTS } from '@/lib/blog-data';
+import { SITE_CONFIG } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'Blog & Practical Guides — MultiZest',
   description:
     'Read in-depth guides, productivity tutorials, and performance optimization articles for web developers, creators, and students.',
+  keywords: [
+    'online tools guides',
+    'image optimization tutorial',
+    'pdf conversion guide',
+    'browser performance engineering',
+    'student productivity tools',
+    'multizest blog',
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.url}/blog`,
+  },
   openGraph: {
     title: 'Blog & Practical Guides — MultiZest',
     description:
       'Read in-depth guides, productivity tutorials, and performance optimization articles for web developers, creators, and students.',
-    url: '/blog',
+    url: `${SITE_CONFIG.url}/blog`,
+    siteName: SITE_CONFIG.name,
     images: [
       {
-        url: '/api/og?title=MultiZest+Blog&category=Guides&desc=In-depth+tutorials+and+performance+guides.',
+        url: `${SITE_CONFIG.url}/api/og?title=MultiZest+Blog&category=Guides&desc=In-depth+tutorials+and+performance+guides.`,
         width: 1200,
         height: 630,
         alt: 'MultiZest Blog',
       },
     ],
   },
-  alternates: {
-    canonical: '/blog',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog & Practical Guides — MultiZest',
+    description:
+      'Read in-depth guides, productivity tutorials, and performance optimization articles for web developers, creators, and students.',
+    creator: SITE_CONFIG.twitterHandle,
+    images: [
+      `${SITE_CONFIG.url}/api/og?title=MultiZest+Blog&category=Guides&desc=In-depth+tutorials+and+performance+guides.`,
+    ],
   },
 };
 

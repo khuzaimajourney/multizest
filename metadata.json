@@ -1,6 +1,8 @@
 {
   "name": "MultiZest",
-  "description": "MultiZest is your all-in-one free online toolbox. Fast, private, browser-based tools to compress images, convert PDFs, generate QR codes, count words, and resize images.",
+  "description": "MultiZest is your 100% free, private online toolbox. Compress images, convert PDFs, generate QR codes, count words, format JSON, remove backgrounds, and resize photos directly in your browser with zero server uploads.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

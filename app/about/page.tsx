@@ -3,18 +3,20 @@ import Link from 'next/link';
 import { ShieldCheck, Zap, Heart, CheckCircle2, ArrowRight } from 'lucide-react';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 
+import { SITE_CONFIG } from '@/lib/seo-config';
+
 export const metadata: Metadata = {
-  title: 'About MultiZest — Your Trusted Online Tool Platform',
+  title: 'About MultiZest — Your Trusted Privacy-First Online Toolbox',
   description:
     'Learn about MultiZest, our core mission to provide free, fast, and 100% privacy-focused online tools, and our commitment to client-side computing.',
   openGraph: {
-    title: 'About MultiZest — Your Trusted Online Tool Platform',
+    title: 'About MultiZest — Your Trusted Privacy-First Online Toolbox',
     description:
       'Learn about MultiZest, our core mission to provide free, fast, and 100% privacy-focused online tools.',
-    url: '/about',
+    url: `${SITE_CONFIG.url}/about`,
   },
   alternates: {
-    canonical: '/about',
+    canonical: `${SITE_CONFIG.url}/about`,
   },
 };
 
@@ -108,7 +110,7 @@ export default function AboutPage() {
 
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Looking to the Future</h2>
           <p>
-            The five utilities currently featured on MultiZest are just the beginning. Our engineering roadmap includes expanding our catalog into audio processing, code formatters, unit converters, markdown previews, and client-side cryptography. We welcome your ideas, feedback, and bug reports as we build the web&apos;s most trustworthy digital workshop.
+            With more than 30 privacy-first utilities currently featured across PDF manipulation, image optimization, text analysis, cryptography, developer formatting, and mathematics, we continue to engineer new capabilities every month. We welcome your ideas, feedback, and feature requests as we build the web&apos;s most reliable, trustworthy digital workshop.
           </p>
         </section>
 

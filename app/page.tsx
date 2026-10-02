@@ -4,6 +4,7 @@ import ToolCategories from '@/components/home/ToolCategories';
 import FeaturedTools from '@/components/home/FeaturedTools';
 import HowItWorks from '@/components/home/HowItWorks';
 import StatsSection from '@/components/home/StatsSection';
+import SeoContentSection from '@/components/home/SeoContentSection';
 import FAQSection from '@/components/home/FAQSection';
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
       <FeaturedTools />
       <HowItWorks />
       <StatsSection />
+      <SeoContentSection />
       <FAQSection />
     </div>
   );

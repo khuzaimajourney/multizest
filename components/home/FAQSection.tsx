@@ -19,7 +19,7 @@ export const HOMEPAGE_FAQS = [
   {
     question: 'What types of tools are currently available on MultiZest?',
     answer:
-      'We currently offer five core utilities: PDF to Image Converter, Image Compressor, Image Resizer, Word Counter & Text Analyzer, and QR Code Generator. We actively add new tools and enhancements every month.',
+      'MultiZest features over 30 high-performance browser utilities across 8 major categories: PDF Tools (PDF to Image, Merge, Compress, Split, Rotate), Image Tools (Compressor, Resizer, Converter, Cropper, Background Remover, Watermark), Text Tools (Word Counter, Case Converter, Text to Speech, Text Diff Checker, Lorem Ipsum), Generator Tools (QR Code Generator with Logo, Password Maker, Color Picker), Developer Tools (JSON Formatter, Base64 Encoder/Decoder, Markdown Preview, JSON to CSV), Calculators (Age, Percentage, BMI), Media Tools (Video to Audio, Image to PDF), and Web & SEO Tools (Meta Tags Generator, UTM Campaign Builder).',
   },
   {
     question: 'Do I need to register an account or provide my email address?',

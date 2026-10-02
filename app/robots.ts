@@ -8,39 +8,41 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: 'Googlebot',
-        allow: [
-          '/',
-          '/tools/',
-          '/categories/',
-          '/blog/',
-          '/api/og',
-          '/_next/static/',
-          '/favicon.svg',
-          '/favicon.ico',
-          '/apple-touch-icon.png',
-        ],
+        allow: '/',
         disallow: ['/api/private/'],
       },
       {
         userAgent: 'Googlebot-Image',
-        allow: ['/api/og', '/images/', '/*.svg$', '/*.png$', '/*.ico$', '/*.jpg$'],
+        allow: ['/api/og', '/images/', '/*.svg$', '/*.png$', '/*.ico$', '/*.jpg$', '/*.webp$'],
       },
       {
         userAgent: 'Bingbot',
-        allow: ['/', '/tools/', '/categories/', '/blog/', '/api/og'],
+        allow: '/',
         disallow: ['/api/private/'],
       },
       {
+        userAgent: 'DuckDuckBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'YandexBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Applebot',
+        allow: '/',
+      },
+      {
         userAgent: 'Twitterbot',
-        allow: ['/', '/api/og'],
+        allow: '/',
       },
       {
         userAgent: 'facebookexternalhit',
-        allow: ['/', '/api/og'],
+        allow: '/',
       },
       {
         userAgent: '*',
-        allow: ['/', '/tools/', '/categories/', '/blog/', '/api/og'],
+        allow: '/',
         disallow: ['/api/private/'],
       },
     ],

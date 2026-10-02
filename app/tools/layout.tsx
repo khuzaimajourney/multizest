@@ -2,29 +2,33 @@ import type { Metadata } from 'next';
 import { SITE_CONFIG } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'All 31 Free Online Tools — Fast, Private Browser Toolbox | MultiZest',
+  title: 'All Free Online Tools — Fast, Private Browser Toolbox | MultiZest',
   description:
-    'Browse our complete directory of 31 lightning-fast online tools. Convert PDFs, compress images, extract audio, generate QR codes, and more with zero server uploads.',
+    'Browse our complete directory of free online tools. Convert PDFs, compress images, extract audio, generate QR codes, format JSON, count words, and resize pictures with 100% client-side privacy.',
   keywords: [
     'free online tools directory',
     'browser tools list',
-    'pdf tools online',
+    'pdf tools online free',
     'image tools free',
-    'web tools',
+    'web developer tools',
+    'free calculators online',
+    'client side privacy tools',
+    'no server upload tools',
     'multizest tools',
+    'online utilities without sign up',
   ],
   alternates: {
-    canonical: '/tools',
+    canonical: `${SITE_CONFIG.url}/tools`,
   },
   openGraph: {
-    title: 'All 31 Free Online Tools — MultiZest',
+    title: 'All Free Online Tools — MultiZest',
     description:
-      'Browse our complete directory of 31 lightning-fast online tools with 100% client-side privacy.',
-    url: '/tools',
+      'Browse our complete directory of lightning-fast online tools with 100% client-side privacy.',
+    url: `${SITE_CONFIG.url}/tools`,
     siteName: SITE_CONFIG.name,
     images: [
       {
-        url: '/api/og?title=All+31+Online+Tools&category=Tool+Catalog&desc=Explore+31+lightning-fast+privacy-first+browser+utilities.',
+        url: `${SITE_CONFIG.url}/api/og?title=All+Online+Tools&category=Tool+Catalog&desc=Explore+lightning-fast+privacy-first+browser+utilities.`,
         width: 1200,
         height: 630,
         alt: 'MultiZest Tools Directory',
@@ -33,10 +37,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All 31 Free Online Tools — MultiZest',
+    title: 'All Free Online Tools — MultiZest',
     description:
-      'Browse our complete directory of 31 lightning-fast online tools with 100% client-side privacy.',
+      'Browse our complete directory of lightning-fast online tools with 100% client-side privacy.',
     creator: SITE_CONFIG.twitterHandle,
+    images: [
+      `${SITE_CONFIG.url}/api/og?title=All+Online+Tools&category=Tool+Catalog&desc=Explore+lightning-fast+privacy-first+browser+utilities.`,
+    ],
   },
   robots: {
     index: true,

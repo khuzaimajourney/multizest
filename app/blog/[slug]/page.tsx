@@ -9,7 +9,7 @@ import ToolCard from '@/components/tools/ToolCard';
 import { BLOG_POSTS, getBlogPostBySlug } from '@/lib/blog-data';
 import { getToolBySlug } from '@/lib/tools-data';
 import { ToolItem, BlogPost } from '@/lib/types';
-import { generateArticleSchema } from '@/lib/seo-config';
+import { generateArticleSchema, SITE_CONFIG } from '@/lib/seo-config';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -28,27 +28,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Post Not Found' };
   }
 
+  const canonicalUrl = `${SITE_CONFIG.url}/blog/${post.slug}`;
+  const ogImageUrl = `${SITE_CONFIG.url}/api/og?title=${encodeURIComponent(post.title)}&category=Blog+Post&desc=${encodeURIComponent(post.description)}`;
+
   return {
     title: `${post.title} — MultiZest Blog`,
     description: post.description,
+    keywords: [
+      ...post.tags,
+      post.category.toLowerCase(),
+      'multizest blog',
+      'web tools guide',
+      'client side tutorial',
+    ],
     openGraph: {
       title: post.title,
       description: post.description,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      url: `/blog/${post.slug}`,
+      url: canonicalUrl,
       images: [
         {
-          url: `/api/og?title=${encodeURIComponent(post.title)}&category=Blog+Post&desc=${encodeURIComponent(post.description)}`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      creator: SITE_CONFIG.twitterHandle,
+      images: [ogImageUrl],
+    },
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: canonicalUrl,
     },
   };
 }
