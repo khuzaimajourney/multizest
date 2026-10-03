@@ -18,7 +18,7 @@ import ToolCard from '@/components/tools/ToolCard';
 import ToolRating from '@/components/tools/ToolRating';
 import ShareTool from '@/components/tools/ShareTool';
 import { ToolItem } from '@/lib/types';
-import { getRelatedTools } from '@/lib/tools-data';
+import { getRelatedTools, getToolHref, TOOLS_DATA } from '@/lib/tools-data';
 import { useToolHistory } from '@/hooks/useToolHistory';
 import { TOOL_KEYWORDS_MAP } from '@/lib/seo-config';
 
@@ -52,7 +52,7 @@ export default function ToolLayout({ tool, children }: ToolLayoutProps) {
           items={[
             { name: 'Tools', href: '/tools' },
             { name: tool.categoryName, href: `/categories/${tool.category}` },
-            { name: tool.name, href: `/tools/${tool.slug}` },
+            { name: tool.name, href: getToolHref(tool) },
           ]}
         />
 
@@ -348,7 +348,7 @@ export default function ToolLayout({ tool, children }: ToolLayoutProps) {
               href="/tools"
               className="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
             >
-              <span>View All 31 Tools</span>
+              <span>View All {TOOLS_DATA.length} Tools</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

@@ -377,6 +377,51 @@ export const TOOL_KEYWORDS_MAP: Record<string, string[]> = {
     'marketing tracking link builder',
     'clean campaign url builder for ads email',
   ],
+  'ai-upscaler': [
+    'ai image upscaler online free',
+    'super resolution ai photo enhancer',
+    'upscale image 2x 4x without losing quality',
+    'fix blurry photo ai enhancer',
+    'enhance pixel resolution online',
+    'onnx super resolution browser',
+    'free ai image upscaler no upload',
+  ],
+  'smart-scanner': [
+    'smart document scanner online',
+    'perspective warp unskew receipt',
+    'flatten document photo taken at angle',
+    'extract text from image ocr tesseract',
+    'camera scan to pdf free online',
+    'document edge detection and flattening',
+    'free client side mobile document scanner',
+  ],
+  'trimmer': [
+    'visual video trimmer online free',
+    'trim video and convert to gif',
+    'mp4 cutter with visual timeline',
+    'browser video trimmer no watermark',
+    'video to animated gif converter hd',
+    'clip mp4 scene online fast',
+    'client side ffmpeg video trimmer',
+  ],
+  'ai-summarizer': [
+    'on device ai text summarizer',
+    'summarize article private offline ai',
+    'transformers js text summarization',
+    'bullet point summary generator free',
+    'distilbart ai text condenser',
+    'free ai essay summarizer no sign up',
+    'zero cloud private ai summarizer',
+  ],
+  'svg-vectorizer': [
+    'raster to svg vectorizer online free',
+    'convert jpg png to svg vector',
+    'logo vector tracer potrace online',
+    'infinite zoom vector logo generator',
+    'convert sketch to svg paths',
+    'image to vector converter no upload',
+    'browser based svg vectorizer',
+  ],
 };
 
 // Build highly targeted metadata for individual tools
@@ -389,26 +434,63 @@ export function buildToolMetadata(slug: string): Metadata {
     };
   }
 
+  // Exact SEO & Intent-Driven Keyword Matrix for V5 Advanced Tools
+  const INTENT_SEO_MAP: Record<string, { title: string; description: string; lsi: string[] }> = {
+    'ai-upscaler': {
+      title: 'Unblur Image Free Online — Make Blurry Photos Crystal Clear | MultiZest',
+      description: 'Unblur image free online with AI. Enhance photo resolution, fix blurry pictures, and make picture clear in your browser with 100% privacy.',
+      lsi: ['unblur image free online', 'enhance photo resolution', 'fix blurry pictures', 'ai image upscaler', 'make picture clear'],
+    },
+    'smart-scanner': {
+      title: 'Extract Text from Image — Picture-to-Text Scanner Online | MultiZest',
+      description: 'Extract text from image free online. Photo to text converter & online receipt scanner to convert handwriting and paper documents to clean copyable text.',
+      lsi: ['extract text from image', 'photo to text converter', 'online receipt scanner', 'convert handwriting to text'],
+    },
+    'trimmer': {
+      title: 'Cut Video Online Free — Quick Video Cutter & GIF Maker | MultiZest',
+      description: 'Cut video online free with no watermark. Fast MP4 trimmer to crop video length and make animated GIFs directly in your browser.',
+      lsi: ['cut video online free', 'mp4 trimmer no watermark', 'crop video length', 'make gif from video'],
+    },
+    'ai-summarizer': {
+      title: 'TLDR Generator & Summarizer — AI Article & Essay Shortener | MultiZest',
+      description: 'TLDR generator and AI summarizer. Summarize article AI, long text shortener, and make essay shorter directly in your browser with zero cloud uploads.',
+      lsi: ['tldr generator & summarizer', 'summarize article ai', 'long text shortener', 'make essay shorter'],
+    },
+    'svg-vectorizer': {
+      title: 'Convert Image to SVG Vector — Free Logo & Image Vectorizer | MultiZest',
+      description: 'Convert image to SVG vector online free. Convert JPG to SVG transparent, auto trace image, and vectorize logo free in your browser.',
+      lsi: ['convert image to svg vector', 'jpg to svg transparent', 'auto trace image', 'vectorize logo free'],
+    },
+  };
+
+  const intentConfig = INTENT_SEO_MAP[slug];
+
   const toolKeywords = TOOL_KEYWORDS_MAP[slug] || [];
-  const baseKeywords = [
-    tool.name.toLowerCase(),
-    `${tool.name.toLowerCase()} online free`,
-    `${tool.name.toLowerCase()} no upload`,
-    `${tool.name.toLowerCase()} browser tool`,
-    tool.categoryName.toLowerCase(),
-    'free online tools',
-    'client side privacy',
-    'no file upload',
-    'multizest',
-  ];
+  const baseKeywords = intentConfig
+    ? intentConfig.lsi
+    : [
+        tool.name.toLowerCase(),
+        `${tool.name.toLowerCase()} online free`,
+        `${tool.name.toLowerCase()} no upload`,
+        `${tool.name.toLowerCase()} browser tool`,
+        tool.categoryName.toLowerCase(),
+        'free online tools',
+        'client side privacy',
+        'no file upload',
+        'multizest',
+      ];
   const combinedKeywords = Array.from(new Set([...toolKeywords, ...baseKeywords]));
 
-  const ogImageUrl = `/api/og?title=${encodeURIComponent(tool.name)}&category=${encodeURIComponent(tool.categoryName)}&desc=${encodeURIComponent(tool.shortDescription)}`;
-  const canonicalUrl = `${SITE_CONFIG.url}/tools/${tool.slug}`;
+  const ogImageUrl = `/api/og?title=${encodeURIComponent(intentConfig ? intentConfig.title.split(' — ')[0] : tool.name)}&category=${encodeURIComponent(tool.categoryName)}&desc=${encodeURIComponent(intentConfig ? intentConfig.description : tool.shortDescription)}`;
+  const canonicalUrl = tool.path ? `${SITE_CONFIG.url}${tool.path}` : `${SITE_CONFIG.url}/tools/${tool.slug}`;
 
   // Formulate high-CTR, search-intent title
-  const optimizedTitle = `${tool.name} — Free Online Tool (100% Private, No Upload) | MultiZest`;
-  const optimizedDescription = `${tool.shortDescription} Fast, 100% private in-browser processing with zero server uploads and no account required.`;
+  const optimizedTitle = intentConfig
+    ? intentConfig.title
+    : `${tool.name} — Free Online Tool (100% Private, No Upload) | MultiZest`;
+  const optimizedDescription = intentConfig
+    ? intentConfig.description
+    : `${tool.shortDescription} Fast, 100% private in-browser processing with zero server uploads and no account required.`;
 
   return {
     title: optimizedTitle,

@@ -6,7 +6,8 @@ export type ToolCategory =
   | 'developer-tools'
   | 'calculator-tools'
   | 'media-tools'
-  | 'web-tools';
+  | 'web-tools'
+  | 'video-tools';
 
 export interface ToolFAQ {
   question: string;
@@ -21,6 +22,7 @@ export interface ToolHowToStep {
 export interface ToolItem {
   id: string;
   slug: string;
+  path?: string;
   name: string;
   tagline: string;
   shortDescription: string;

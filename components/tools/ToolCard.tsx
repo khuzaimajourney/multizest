@@ -39,6 +39,7 @@ import {
 } from 'lucide-react';
 import { ToolItem } from '@/lib/types';
 import { useFavorites } from '@/hooks/useFavorites';
+import { getToolHref } from '@/lib/tools-data';
 
 interface ToolCardProps {
   tool: ToolItem;
@@ -48,6 +49,21 @@ interface ToolCardProps {
 export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorited = isFavorite(tool.slug);
+  const toolHref = getToolHref(tool);
+
+  const getBadgeStyle = (badge?: string) => {
+    if (!badge) return '';
+    if (badge.includes('AI')) {
+      return 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-sm';
+    }
+    if (badge === 'New') {
+      return 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm';
+    }
+    if (badge === 'WASM') {
+      return 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300';
+    }
+    return 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300';
+  };
 
   const getToolIcon = (iconName: string) => {
     switch (iconName) {
@@ -138,13 +154,13 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
           <div>
             <div className="flex items-center gap-2">
               <Link
-                href={`/tools/${tool.slug}`}
+                href={toolHref}
                 className="font-bold text-base text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
               >
                 {tool.name}
               </Link>
               {tool.badge && (
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${getBadgeStyle(tool.badge)}`}>
                   {tool.badge}
                 </span>
               )}
@@ -168,7 +184,7 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
             <Heart className={`w-4 h-4 ${favorited ? 'text-red-500 fill-red-500' : ''}`} />
           </button>
           <Link
-            href={`/tools/${tool.slug}`}
+            href={toolHref}
             className="px-3.5 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white text-xs font-semibold inline-flex items-center gap-1 transition-all"
           >
             <span>Use Free</span>
@@ -189,7 +205,7 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
           </div>
           <div className="flex items-center gap-2">
             {tool.badge && (
-              <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+              <span className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${getBadgeStyle(tool.badge)}`}>
                 {tool.badge}
               </span>
             )}
@@ -213,7 +229,7 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
             {tool.categoryName}
           </span>
           <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-            <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
+            <Link href={toolHref}>{tool.name}</Link>
           </h3>
         </div>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
@@ -241,7 +257,7 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
           100% Client-Side
         </span>
         <Link
-          href={`/tools/${tool.slug}`}
+          href={toolHref}
           className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-all"
         >
           <span>Use Free</span>

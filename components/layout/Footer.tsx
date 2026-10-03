@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Heart, ShieldCheck, Zap, Lock } from 'lucide-react';
 import Logo from '../shared/Logo';
-import { TOOLS_DATA } from '@/lib/tools-data';
+import { TOOLS_DATA, getToolHref } from '@/lib/tools-data';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -63,7 +63,7 @@ export default function Footer() {
               {TOOLS_DATA.map((tool) => (
                 <li key={tool.id}>
                   <Link
-                    href={`/tools/${tool.slug}`}
+                    href={getToolHref(tool)}
                     className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     {tool.name}

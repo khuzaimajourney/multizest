@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { TOOLS_DATA, TOOL_CATEGORIES } from '@/lib/tools-data';
+import { TOOLS_DATA, TOOL_CATEGORIES, getToolHref } from '@/lib/tools-data';
 import { BLOG_POSTS } from '@/lib/blog-data';
 import { SITE_CONFIG } from '@/lib/seo-config';
 
@@ -23,9 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // 2. All 31 Individual Tool Pages — Highest Search Intent
+  // 2. All Individual Tool Pages — Highest Search Intent
   const toolPages: MetadataRoute.Sitemap = TOOLS_DATA.map((tool) => ({
-    url: `${baseUrl}/tools/${tool.slug}`,
+    url: `${baseUrl}${getToolHref(tool)}`,
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.9,

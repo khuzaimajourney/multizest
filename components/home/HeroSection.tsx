@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Search, Sparkles, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
-import { TOOLS_DATA } from '@/lib/tools-data';
+import { TOOLS_DATA, getToolHref } from '@/lib/tools-data';
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 filteredTools.map((tool) => (
                   <Link
                     key={tool.id}
-                    href={`/tools/${tool.slug}`}
+                    href={getToolHref(tool)}
                     className="flex items-center justify-between p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
                   >
                     <div>

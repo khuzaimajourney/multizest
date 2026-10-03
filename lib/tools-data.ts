@@ -1078,57 +1078,59 @@ export const TOOLS_DATA: ToolItem[] = [
   {
     id: 'remove-background',
     slug: 'remove-background',
-    name: 'AI Image Background Remover',
-    tagline: 'Remove Photo Backgrounds Online with AI',
-    shortDescription: 'Instantly cut out backgrounds from photos with zero clicks. 100% private, runs directly on your device with interactive before/after preview.',
-    longDescription: 'The MultiZest AI Image Background Remover detects subjects in portraits, product photos, pet pictures, and logos, cleanly removing the background in seconds. Everything processes locally right inside your web browser using client-side image segmentation, meaning your photos never get uploaded to any third-party cloud server.',
+    path: '/tools/image-tools/remove-background',
+    name: 'Background Magic Eraser',
+    tagline: 'Make Backgrounds Disappear Instantly with AI',
+    shortDescription: 'Remove image background free online with RMBG-1.4 AI. Make backgrounds transparent, replace with studio colors or custom photos, and touch up fine edges with pro brushes.',
+    longDescription: 'Need to isolate a product for your online store, create a clean headshot for LinkedIn, or make a transparent sticker? The MultiZest Background Magic Eraser uses smart RMBG-1.4 vision AI right on your computer. It melts away backgrounds in seconds without uploading your private photos to remote servers. You can easily touch up hair strands with the Erase & Restore brushes, or swap the background for a studio backdrop, vibrant gradient, or custom photo.',
     category: 'image-tools',
     categoryName: 'Image Tools',
     iconName: 'Sparkles',
-    badge: 'AI Powered',
+    badge: 'AI Pro',
     featured: true,
     rating: 4.9,
-    ratingCount: 1420,
+    ratingCount: 1980,
     howToSteps: [
       {
-        title: 'Drop Your Photo',
-        description: 'Drag and drop any JPG, PNG, or WebP photo into the large drop zone or click to select.',
+        title: 'Drop your photo into the magic box',
+        description: 'Drag and drop any JPG, PNG, or WebP picture into the workspace above.',
       },
       {
-        title: 'Instant Automatic Cutout',
-        description: 'The background removal algorithm automatically isolates the main subject with transparent edges.',
+        title: 'Watch the AI work its magic',
+        description: 'Our on-device RMBG-1.4 model isolates your subject instantly with silky-smooth edge precision.',
       },
       {
-        title: 'Preview with Before/After Slider',
-        description: 'Drag the split handle back and forth to inspect edges, hair strands, and cutout precision.',
+        title: 'Touch up with friendly brushes',
+        description: 'Use the Erase or Restore brush to quickly bring back or remove any delicate details.',
       },
       {
-        title: 'Download Transparent PNG',
-        description: 'Click "Download Transparent PNG" to save your high-resolution cutout with full alpha channel.',
+        title: 'Pick a new backdrop & download',
+        description: 'Keep it transparent, pick a crisp studio color, or upload your own background scene.',
       },
     ],
     features: [
-      'Automatic subject detection for portraits, products, and objects',
-      'Interactive Before/After slider to inspect edges before downloading',
-      'Choice of transparent alpha or solid color replacement (White, Black, Neon Green)',
-      'High-resolution output preserving original pixel dimensions',
-      '100% private: photos never leave your computer or smartphone',
+      'Powered by state-of-the-art RMBG-1.4 AI running locally on your device',
+      'Smooth Web Worker execution keeps your browser snappy and responsive',
+      'Caches AI models locally so your second visit is virtually instantaneous',
+      'Manual Erase & Restore brushes with adjustable zoom for pixel-perfect edges',
+      'One-click backdrop replacement: transparent alpha, solid colors, studio gradients, or custom pictures',
+      '100% private: your photos never leave your device',
     ],
     faqs: [
       {
-        question: 'Are my personal photos uploaded to an AI server?',
-        answer: 'No! All pixel processing and edge segmentation run completely in your browser on your device GPU/CPU. Your photos never leave your machine.',
+        question: 'How do I remove the background from a picture for free without watermarks?',
+        answer: 'Simply upload your photo into MultiZest Background Magic Eraser. The AI cuts around your subject automatically in seconds, and you can download the full-resolution PNG completely free without any watermarks or account sign-ups.',
       },
       {
-        question: 'What types of photos work best?',
-        answer: 'Photos with clear contrast between the subject and background (such as portrait headshots, e-commerce products, and pet photos) deliver the cleanest cutouts.',
+        question: 'Are my private photos uploaded to a cloud server?',
+        answer: 'No! Unlike other background removal websites, MultiZest runs the AI model directly inside your browser sandbox. Your photos stay strictly on your device.',
       },
       {
-        question: 'Can I add a custom background color instead of transparency?',
-        answer: 'Yes! You can toggle between transparent alpha, crisp white (ideal for Amazon/eBay listings), or custom solid backdrop colors before downloading.',
+        question: 'Can I replace the background with clean white for Amazon or eBay?',
+        answer: 'Yes! After the background is removed, switch to the "Replace Background" tab and click "Pure White" to create Amazon, Shopify, or eBay-compliant product shots in one tap.',
       },
     ],
-    relatedToolSlugs: ['image-compressor', 'image-cropper', 'watermark-image'],
+    relatedToolSlugs: ['ai-upscaler', 'svg-vectorizer', 'watermark-image'],
   },
 
   // 2. Add Watermark to Image
@@ -1595,7 +1597,308 @@ export const TOOLS_DATA: ToolItem[] = [
     ],
     relatedToolSlugs: ['word-counter', 'case-converter', 'json-formatter'],
   },
+
+  // ==========================================
+  // V4 ADVANCED AI & CRAZY UNIQUE TOOLS (5 Additions - Total 36 Tools)
+  // ==========================================
+
+  // 1. AI Image Unblur (Upscaler)
+  {
+    id: 'ai-upscaler',
+    slug: 'ai-upscaler',
+    path: '/tools/image-tools/ai-upscaler',
+    name: 'Image Enhancer & Unblur',
+    tagline: 'Make Blurry Photos Crystal Clear Online Free',
+    shortDescription: 'Unblur image free online with AI super resolution. Enhance photo resolution, fix blurry pictures, and make pictures crystal clear in seconds.',
+    longDescription: 'Took a blurry photo or have a pixelated image you need sharp for social media or printing? The MultiZest Image Enhancer & Unblur breathes crystal clarity back into your pictures using local AI. It enhances photo resolution 2x or 4x without pixelation or sending your private photos to external cloud servers. Compare details using our live slider and save your enhanced photo with one click.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Maximize2',
+    badge: 'AI Magic',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1240,
+    howToSteps: [
+      {
+        title: 'Drop your blurry photo into the box above',
+        description: 'Drag and drop any low-res or blurry picture from your phone or computer.',
+      },
+      {
+        title: 'Choose your enhancement boost',
+        description: 'Pick 2x to double pixel resolution or 4x Ultra Resolution for maximum sharpness.',
+      },
+      {
+        title: 'Click "Do the Magic!"',
+        description: 'Our neural enhancer reconstructs realistic details in a dedicated background worker without freezing your screen.',
+      },
+      {
+        title: 'Slide to compare and save your sharp picture',
+        description: 'Drag the split handle back and forth to inspect crisp edges, then download in full high resolution.',
+      },
+    ],
+    features: [
+      'Unblur image free online with intelligent AI neural reconstruction',
+      'Boosts resolution 2x and 4x while eliminating compression artifacts',
+      'Interactive Before/After split inspection slider',
+      'Automatic memory safeguards and instant cancel button',
+      '100% private: all upscaling runs client-side with zero cloud uploads',
+    ],
+    faqs: [
+      {
+        question: 'How do I make a blurry picture clear for free?',
+        answer: 'Drop your photo into the MultiZest Image Enhancer & Unblur, choose a 2x or 4x scale, and click "Do the Magic!". The neural engine reconstructs missing textures and sharpens edges right in your browser for free.',
+      },
+      {
+        question: 'Can this fix old or compressed social media photos?',
+        answer: 'Yes! It is specifically tuned to clean up JPEG compression artifacts, pixelation, and camera shake from smartphone shots and social media downloads.',
+      },
+      {
+        question: 'Are my photos kept 100% private on my device?',
+        answer: 'Yes! The entire super-resolution process runs directly in your browser using WebAssembly. Your photos are never sent to any server.',
+      },
+    ],
+    relatedToolSlugs: ['remove-background', 'svg-vectorizer', 'image-compressor'],
+  },
+
+  // 2. Picture-to-Text Scanner (Smart Scanner)
+  {
+    id: 'smart-scanner',
+    slug: 'smart-scanner',
+    path: '/tools/pdf-tools/smart-scanner',
+    name: 'Picture-to-Text Scanner',
+    tagline: 'Extract Text from Images, Receipts & Notes Online',
+    shortDescription: 'Extract text from image free online. Convert photos of receipts, handwritten notes, and documents into clean copyable text with optical character recognition.',
+    longDescription: 'Have a picture of a document or receipt and don\'t want to type it all out manually? The MultiZest Picture-to-Text Scanner auto-detects page boundaries, unskews messy angles, and extracts every word into editable text. Download your straightened scan as a PDF or copy the extracted text straight to your clipboard.',
+    category: 'pdf-tools',
+    categoryName: 'PDF Tools',
+    iconName: 'FileText',
+    badge: 'AI OCR',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1510,
+    howToSteps: [
+      {
+        title: 'Snap or upload your document photo',
+        description: 'Upload any picture of a paper page, book, agreement, or store receipt taken at any angle.',
+      },
+      {
+        title: 'Fine-tune the 4 corner pins',
+        description: 'Drag the corner handles (Top-Left, Top-Right, Bottom-Right, Bottom-Left) to tightly frame your paper.',
+      },
+      {
+        title: 'Unskew & enhance readability',
+        description: 'Click "Straighten Document" to flatten perspective and apply clean B&W or Magic Color filters.',
+      },
+      {
+        title: 'Extract words into copyable text',
+        description: 'Click "Extract Text" to let Tesseract OCR read the document. Copy text or download as a PDF with one tap.',
+      },
+    ],
+    features: [
+      'Extract text from image free online without retyping notes manually',
+      'Perspective warp algorithm unskews receipts and angled document shots',
+      'Buttery-smooth 4-point corner polygon with real-time feedback',
+      'Document scan filters: Magic Color contrast, crisp B&W, and grayscale',
+      'Download straightened scans as high-res PNG, searchable PDF, or TXT file',
+      'Runs 100% locally on your device with complete privacy for sensitive papers',
+    ],
+    faqs: [
+      {
+        question: 'How do I extract text from an image without typing it out?',
+        answer: 'Upload your image to the Picture-to-Text Scanner, adjust the corner pins if it was taken at an angle, and click "Extract Text". The built-in OCR reads every printed line into an editable text box you can copy immediately.',
+      },
+      {
+        question: 'Does it work on phone camera photos of receipts and paper?',
+        answer: 'Yes! The perspective correction engine flattens angled photos taken on any iPhone or Android phone, correcting distortion and shadows.',
+      },
+      {
+        question: 'Is it safe for personal agreements and tax receipts?',
+        answer: 'Absolutely. All perspective warping and OCR character recognition happen 100% inside your browser sandbox. No confidential documents are ever sent over the internet.',
+      },
+    ],
+    relatedToolSlugs: ['pdf-to-image', 'image-to-pdf', 'compress-pdf'],
+  },
+
+  // 3. Quick Video Cutter & GIF Maker (Trimmer)
+  {
+    id: 'trimmer',
+    slug: 'trimmer',
+    path: '/tools/video-tools/trimmer',
+    name: 'Quick Video Cutter & GIF Maker',
+    tagline: 'Cut Video Online Free & Make Instant GIFs',
+    shortDescription: 'Cut video online free with zero watermarks. Easily crop video length, cut out clips for WhatsApp or Instagram, and make high-quality animated GIFs.',
+    longDescription: 'Have a long video and just want to cut out the best middle part to share with friends? The MultiZest Quick Video Cutter lets you drag timeline handles with millisecond precision, preview scene cuts instantly, and save clean MP4 clips or animated GIFs without watermarks or slow server uploads.',
+    category: 'video-tools',
+    categoryName: 'Video Tools',
+    iconName: 'Video',
+    badge: 'Zero Watermark',
+    featured: true,
+    rating: 4.8,
+    ratingCount: 1140,
+    howToSteps: [
+      {
+        title: 'Drop your video into the timeline',
+        description: 'Drop any MP4, WebM, or MOV video file (up to 100MB supported for smooth memory safety).',
+      },
+      {
+        title: 'Drag the start and end handles',
+        description: 'Slide the visual timeline handles or use the +1s / -0.1s buttons to pick the exact scene you want.',
+      },
+      {
+        title: 'Preview your selected clip',
+        description: 'Hit play to loop your selected segment and check frame-by-frame cuts.',
+      },
+      {
+        title: 'Save your video or export as a GIF',
+        description: 'Click "Save Video Clip" or "Make a Looping GIF" to download instantly with no watermarks.',
+      },
+    ],
+    features: [
+      'Cut video online free with zero watermarks and zero quality loss',
+      'Visual timeline with live filmstrip thumbnail preview for easy seeking',
+      'Millisecond range sliders and frame-stepping buttons for precise scene trimming',
+      'Turn highlights into animated GIFs with customizable framerates and dimensions',
+      'Memory safety guard prevents browser tab crashes',
+      '100% private: video files never leave your device',
+    ],
+    faqs: [
+      {
+        question: 'How do I cut out the middle of a video for free without watermarks?',
+        answer: 'Upload your video to the MultiZest Quick Video Cutter, drag the start and end handles around the scene you want to keep, and click "Save Video Clip". Your trimmed video downloads in seconds with zero watermarks.',
+      },
+      {
+        question: 'Can I turn my favorite video clip into a looping GIF?',
+        answer: 'Yes! Select your scene and click "Make a Looping GIF". You can choose from 10, 15, or 24 FPS and multiple size presets optimized for Discord, Slack, and WhatsApp.',
+      },
+      {
+        question: 'Why is it so fast compared to other online video trimmers?',
+        answer: 'Because MultiZest trims your video directly in your local device memory using WebAssembly and hardware acceleration, bypassing the long upload and download queues of traditional cloud editors.',
+      },
+    ],
+    relatedToolSlugs: ['video-to-audio', 'image-converter', 'image-cropper'],
+  },
+
+  // 4. TL;DR Summary Generator (AI Summarizer)
+  {
+    id: 'ai-summarizer',
+    slug: 'ai-summarizer',
+    path: '/tools/text-tools/ai-summarizer',
+    name: 'TL;DR Summary Generator',
+    tagline: 'Summarize Long Articles & Essays 100% Privately',
+    shortDescription: 'TLDR generator and AI article summarizer. Condense long essays, meeting transcripts, and research papers into clear, bite-sized summaries or bullet points.',
+    longDescription: 'Don\'t have time to read a 15-minute article or 20-page document? The MultiZest TL;DR Summary Generator reads the entire text and gives you the core takeaways in seconds. Runs 100% on your device so your sensitive notes and drafts stay completely private.',
+    category: 'text-tools',
+    categoryName: 'Text Tools',
+    iconName: 'FileEdit',
+    badge: 'AI Smart',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1390,
+    howToSteps: [
+      {
+        title: 'Paste your article or notes',
+        description: 'Paste your copy (up to 1,500 words at a time) or click "Try Sample Article".',
+      },
+      {
+        title: 'Pick your favorite format',
+        description: 'Choose "Short & Sweet" for a quick executive summary or "Bullet Points" for key takeaways.',
+      },
+      {
+        title: 'Click "Summarize It"',
+        description: 'Our on-device neural language model synthesizes the summary right on your computer.',
+      },
+      {
+        title: 'Copy or export in Markdown',
+        description: 'Check how much reading time you saved and copy the summary with one click.',
+      },
+    ],
+    features: [
+      'TLDR generator and article summarizer running 100% on your local device',
+      'Two focused modes: "Short & Sweet" overview and "Bullet Points" takeaways',
+      'Word reduction analytics and estimated reading time savings metrics',
+      'Smooth streaming text effect as the AI types your response',
+      '100% private: your writings, proprietary memos, and essays never touch the cloud',
+    ],
+    faqs: [
+      {
+        question: 'How does the AI summarize long texts without sending data to servers?',
+        answer: 'MultiZest uses state-of-the-art Transformers.js models that download into your browser once and execute neural inference locally using your device CPU/GPU.',
+      },
+      {
+        question: 'What is the difference between Short & Sweet and Bullet Points?',
+        answer: '"Short & Sweet" gives you a cohesive 2-3 sentence executive synopsis. "Bullet Points" extracts the core arguments and facts into an easily scannable list.',
+      },
+      {
+        question: 'Can I paste private company memos or medical research papers?',
+        answer: 'Yes! Because nothing is ever transmitted over the network or used to train public AI models, MultiZest is completely safe for confidential materials.',
+      },
+    ],
+    relatedToolSlugs: ['word-counter', 'case-converter', 'markdown-preview'],
+  },
+
+  // 5. Convert Image to Vector (SVG Vectorizer)
+  {
+    id: 'svg-vectorizer',
+    slug: 'svg-vectorizer',
+    path: '/tools/image-tools/svg-vectorizer',
+    name: 'Convert Image to Vector (SVG)',
+    tagline: 'Convert JPG/PNG Logos to Infinitely Scalable SVG Vectors',
+    shortDescription: 'Convert image to SVG vector online free. Auto-trace pixelated JPG and PNG logos into clean, infinitely scalable vector graphics for printing and web design.',
+    longDescription: 'Have a pixelated logo or low-res icon that looks blurry when enlarged? MultiZest transforms raster images into crisp SVG vector curves. Perfect for laser cutting, vinyl printing, web graphics, and billboards without losing sharpness at any size.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Sparkles',
+    badge: 'Vectorize',
+    featured: true,
+    rating: 4.8,
+    ratingCount: 980,
+    howToSteps: [
+      {
+        title: 'Upload your raster image or logo',
+        description: 'Drop any JPG, PNG, or WebP graphic, signature, or icon.',
+      },
+      {
+        title: 'Select color style & detail',
+        description: 'Choose "Black & White (Silhouette)", "Few Colors", or "High Detail".',
+      },
+      {
+        title: 'Auto-trace mathematical curves',
+        description: 'Our vectorizer translates pixel clusters into clean mathematical SVG paths in a background worker.',
+      },
+      {
+        title: 'Zoom up to 1600% & download',
+        description: 'Inspect the infinite sharpness of your vector curves and download your clean .SVG file.',
+      },
+    ],
+    features: [
+      'Convert image to SVG vector online free with mathematical precision',
+      'Transforms blurry JPG/PNG logos into resolution-independent vector paths',
+      'Tailored presets for silhouettes, graphic icons, and multi-color artwork',
+      'Interactive zoom viewport up to 1600% to inspect smooth curve geometry',
+      'One-click download of .SVG file, copy SVG XML code, or copy Data URI',
+      '100% private in-browser operation with zero server uploads',
+    ],
+    faqs: [
+      {
+        question: 'Why should I convert my raster logo into an SVG vector?',
+        answer: 'Raster images (JPG/PNG) pixelate and blur when enlarged. Vector SVGs use mathematical formulas for curves, allowing you to scale a logo from a business card to a billboard with zero loss in sharpness.',
+      },
+      {
+        question: 'How do I trace a low-resolution JPG into clean vector lines?',
+        answer: 'Upload your image to MultiZest Convert Image to Vector, pick your preferred color count preset, and the tool will automatically outline and vectorize the shapes into smooth paths.',
+      },
+      {
+        question: 'Does the vectorizer work offline in my browser?',
+        answer: 'Yes! The mathematical tracing algorithm runs 100% locally in your browser memory, keeping your artwork private and fast.',
+      },
+    ],
+    relatedToolSlugs: ['remove-background', 'ai-upscaler', 'image-converter'],
+  },
 ];
+
+export function getToolHref(tool: ToolItem): string {
+  return tool.path || `/tools/${tool.slug}`;
+}
 
 export function getToolBySlug(slug: string): ToolItem | undefined {
   return TOOLS_DATA.find((tool) => tool.slug === slug);

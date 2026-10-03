@@ -26,7 +26,7 @@ export default function FeaturedTools() {
             href="/tools"
             className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
           >
-            <span>View All 31 Tools</span>
+            <span>View All {TOOLS_DATA.length} Tools</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

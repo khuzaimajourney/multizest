@@ -289,6 +289,42 @@ export const CATEGORIES_DATA: CategoryInfo[] = [
       },
     ],
   },
+  {
+    id: 'video-tools',
+    name: 'Video Tools',
+    slug: 'video-tools',
+    iconName: 'Video',
+    description: 'Cut, trim, crop videos, and create lightweight animated GIFs directly in your browser with FFmpeg and WebAssembly.',
+    color: 'from-rose-600 to-red-600',
+    benefits: [
+      {
+        title: 'Zero Cloud Uploads',
+        description: 'Large gigabyte MP4 and MOV footage is processed in your device memory with zero upload wait time.',
+      },
+      {
+        title: 'Timeline Precision',
+        description: 'Dual-handle seek bar with millisecond accuracy and visual frame strip for perfect scene clipping.',
+      },
+      {
+        title: 'Instant GIF Generation',
+        description: 'Turn reactions, clips, and highlights into high-framerate GIFs optimized for Discord, Slack, and social posts.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Are my videos uploaded to a cloud server?',
+        answer: 'No! Everything is decoded, trimmed, and converted 100% locally in your browser using WebAssembly and Web Workers.',
+      },
+      {
+        question: 'What video file formats are supported?',
+        answer: 'MP4, WebM, MOV, and MKV video formats are supported up to 100MB for smooth client-side performance.',
+      },
+      {
+        question: 'Can I save the selection as both MP4 and GIF?',
+        answer: 'Yes! You can choose to export as a trimmed MP4 video file or convert the selected frame segment into an animated GIF.',
+      },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string): CategoryInfo | undefined {
