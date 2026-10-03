@@ -1,6 +1,7 @@
 export type ToolCategory =
   | 'pdf-tools'
   | 'image-tools'
+  | 'audio-tools'
   | 'text-tools'
   | 'generator-tools'
   | 'developer-tools'

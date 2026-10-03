@@ -36,6 +36,8 @@ import {
   Link2,
   Table,
   GitCompare,
+  Camera,
+  Mic,
 } from 'lucide-react';
 import { ToolItem } from '@/lib/types';
 import { useFavorites } from '@/hooks/useFavorites';
@@ -138,6 +140,10 @@ export default function ToolCard({ tool, viewMode = 'grid' }: ToolCardProps) {
         return <Table className="w-5 h-5 text-teal-500" />;
       case 'GitCompare':
         return <GitCompare className="w-5 h-5 text-amber-500" />;
+      case 'Camera':
+        return <Camera className="w-5 h-5 text-blue-500" />;
+      case 'Mic':
+        return <Mic className="w-5 h-5 text-indigo-500" />;
 
       default:
         return <Sparkles className="w-5 h-5 text-blue-500" />;

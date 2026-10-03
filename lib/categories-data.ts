@@ -74,6 +74,42 @@ export const CATEGORIES_DATA: CategoryInfo[] = [
     ],
   },
   {
+    id: 'audio-tools',
+    name: 'Audio Tools',
+    slug: 'audio-tools',
+    iconName: 'Volume2',
+    description: 'Transform your voice in real time with fun effects and remove unwanted background noise from recordings directly in your browser with zero server uploads.',
+    color: 'from-cyan-500 to-blue-600',
+    benefits: [
+      {
+        title: 'Zero Cloud Uploads',
+        description: 'Microphone feeds, voice recordings, and sensitive audio clips never leave your device.',
+      },
+      {
+        title: 'Real-Time Web Audio Engine',
+        description: 'Instantaneous audio synthesis and live visualizer powered by native browser Web Audio and Web Workers.',
+      },
+      {
+        title: 'High-Fidelity Studio Export',
+        description: 'Download crisp, denoised audio and transformed voice recordings in lossless WAV or MP3.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Are my audio recordings or microphone input stored on any server?',
+        answer: 'Never. All audio capturing, voice effects modulation, and noise suppression run 100% locally in your browser memory. We never record, upload, or transmit your audio.',
+      },
+      {
+        question: 'Do I need to install any external software or drivers?',
+        answer: 'No software installation is required. Everything operates seamlessly inside your modern web browser on desktop and mobile devices.',
+      },
+      {
+        question: 'What audio formats are supported for noise cleaning?',
+        answer: 'We support MP3, WAV, OGG, WebM, and M4A audio files up to 50MB (roughly 30 minutes of continuous speech).',
+      },
+    ],
+  },
+  {
     id: 'text-tools',
     name: 'Text Tools',
     slug: 'text-tools',

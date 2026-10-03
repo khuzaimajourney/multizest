@@ -422,6 +422,59 @@ export const TOOL_KEYWORDS_MAP: Record<string, string[]> = {
     'image to vector converter no upload',
     'browser based svg vectorizer',
   ],
+  'magic-eraser': [
+    'remove object from photo free',
+    'erase person from picture',
+    'ai magic eraser online',
+    'remove unwanted objects from photos',
+    'content aware fill free',
+    'photo object remover',
+    'remove text from image',
+    'clean up photo background',
+  ],
+  'colorize-photo': [
+    'colorize black and white photo free',
+    'add color to old photo',
+    'ai photo colorizer online',
+    'black and white to color converter',
+    'restore old photos color',
+    'colorize vintage photos',
+    'ai color old pictures',
+  ],
+  'passport-photo': [
+    'free passport photo maker online',
+    'make passport photo at home',
+    'passport photo generator free',
+    'id photo maker',
+    'visa photo creator online',
+    'passport size photo app',
+    'print passport photo 4x6',
+    'us passport photo free',
+    'uk passport photo maker',
+    'india passport photo size',
+  ],
+  'voice-changer': [
+    'voice changer online free',
+    'real time voice changer',
+    'change voice to robot online',
+    'deep voice changer free',
+    'chipmunk voice effect online',
+    'voice disguiser online',
+    'fun voice effects',
+    'record changed voice',
+    'voice changer no download',
+  ],
+  'noise-remover': [
+    'remove background noise from audio free',
+    'clean up audio recording online',
+    'ai noise remover',
+    'remove wind noise from video',
+    'podcast noise reduction free',
+    'audio noise cleaner online',
+    'reduce background noise in recording',
+    'denoise audio free',
+    'remove fan noise from audio',
+  ],
 };
 
 // Build highly targeted metadata for individual tools
@@ -434,7 +487,7 @@ export function buildToolMetadata(slug: string): Metadata {
     };
   }
 
-  // Exact SEO & Intent-Driven Keyword Matrix for V5 Advanced Tools
+  // Exact SEO & Intent-Driven Keyword Matrix for V5 & V6 Advanced Tools
   const INTENT_SEO_MAP: Record<string, { title: string; description: string; lsi: string[] }> = {
     'ai-upscaler': {
       title: 'Unblur Image Free Online — Make Blurry Photos Crystal Clear | MultiZest',
@@ -460,6 +513,79 @@ export function buildToolMetadata(slug: string): Metadata {
       title: 'Convert Image to SVG Vector — Free Logo & Image Vectorizer | MultiZest',
       description: 'Convert image to SVG vector online free. Convert JPG to SVG transparent, auto trace image, and vectorize logo free in your browser.',
       lsi: ['convert image to svg vector', 'jpg to svg transparent', 'auto trace image', 'vectorize logo free'],
+    },
+    'magic-eraser': {
+      title: 'Remove Objects from Photos Free — AI Magic Eraser | MultiZest',
+      description: 'Erase unwanted people, wires, text, or objects from any photo using AI. 100% free, no sign-up, works in your browser. Your photos stay private.',
+      lsi: [
+        'remove object from photo free',
+        'erase person from picture',
+        'ai magic eraser online',
+        'remove unwanted objects from photos',
+        'content aware fill free',
+        'photo object remover',
+        'remove text from image',
+        'clean up photo background',
+      ],
+    },
+    'colorize-photo': {
+      title: 'Colorize Black & White Photos Free — AI Photo Colorizer | MultiZest',
+      description: 'Add realistic colors to old black and white photos using AI. Free, instant, no sign-up. Bring your family memories to life in seconds.',
+      lsi: [
+        'colorize black and white photo free',
+        'add color to old photo',
+        'ai photo colorizer online',
+        'black and white to color converter',
+        'restore old photos color',
+        'colorize vintage photos',
+        'ai color old pictures',
+      ],
+    },
+    'passport-photo': {
+      title: 'Free Passport Photo Maker — Create ID Photos Online | MultiZest',
+      description: 'Make passport photos at home for free! AI auto-crops, removes background, and creates a printable sheet. Supports US, UK, India, EU, Canada & more.',
+      lsi: [
+        'free passport photo maker online',
+        'make passport photo at home',
+        'passport photo generator free',
+        'id photo maker',
+        'visa photo creator online',
+        'passport size photo app',
+        'print passport photo 4x6',
+        'us passport photo free',
+        'uk passport photo maker',
+        'india passport photo size',
+      ],
+    },
+    'voice-changer': {
+      title: 'Free Real-Time Voice Changer Online — Robot, Deep, Chipmunk | MultiZest',
+      description: 'Change your voice in real-time with fun effects: Robot, Deep Voice, Chipmunk, Echo, Ghost & more. Record and download. Free, no app needed!',
+      lsi: [
+        'voice changer online free',
+        'real time voice changer',
+        'change voice to robot online',
+        'deep voice changer free',
+        'chipmunk voice effect online',
+        'voice disguiser online',
+        'fun voice effects',
+        'record changed voice',
+        'voice changer no download',
+      ],
+    },
+    'noise-remover': {
+      title: 'Remove Background Noise from Audio Free — AI Noise Remover | MultiZest',
+      description: 'Clean up noisy audio recordings instantly. Remove wind, fan, traffic, and background noise from podcasts, voice memos & videos. Free, no sign-up.',
+      lsi: [
+        'remove background noise from audio free',
+        'clean up audio recording online',
+        'ai noise remover',
+        'remove wind noise from video',
+        'podcast noise reduction free',
+        'audio noise cleaner online',
+        'reduce background noise in recording',
+        'denoise audio free',
+        'remove fan noise from audio',
+      ],
     },
   };
 

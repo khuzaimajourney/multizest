@@ -1894,6 +1894,313 @@ export const TOOLS_DATA: ToolItem[] = [
     ],
     relatedToolSlugs: ['remove-background', 'ai-upscaler', 'image-converter'],
   },
+
+  // V6 "AI MAGIC" TOOLS
+  {
+    id: 'magic-eraser',
+    slug: 'magic-eraser',
+    path: '/tools/image-tools/magic-eraser',
+    name: 'AI Magic Eraser',
+    tagline: 'Remove Objects, People & Text from Photos Free',
+    shortDescription: 'Erase unwanted people, wires, text, or objects from any photo using AI. 100% free, no sign-up, works in your browser. Your photos stay private.',
+    longDescription: 'Ever taken the perfect photo, only to notice a stranger in the background, an ugly wire crossing the sky, or a piece of trash on the ground? The MultiZest AI Magic Eraser lets you simply paint over anything you do not want, and our artificial intelligence will seamlessly erase it — filling in the background as if the object was never there. This is the same technology popularized in expensive tools like Adobe Photoshop Content-Aware Fill and Google Photos Magic Eraser, but we offer it completely free directly in your web browser. Everything is executed entirely in your local browser sandbox using dedicated Web Workers and WebAssembly. Your photos are never uploaded to any remote server, keeping your family memories, private vacation snaps, and sensitive documents 100% confidential. Common items people erase include photobombing strangers, electrical power lines and wires, watermarks, text timestamps, signs, logos, background cars, and blemishes on product photography.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Sparkles',
+    badge: 'AI Magic',
+    featured: true,
+    rating: 4.8,
+    ratingCount: 2847,
+    howToSteps: [
+      {
+        title: 'Upload Your Photo',
+        description: 'Drag and drop your photo into the upload area above, or tap to browse your local device files. We support JPG, PNG, and WebP images up to 10MB.',
+      },
+      {
+        title: 'Paint Over the Object You Want Gone',
+        description: 'Use the interactive brush tool with your mouse or mobile touch screen to paint over the person, wire, sign, or object you wish to remove. A semi-transparent red overlay highlights your selection.',
+      },
+      {
+        title: 'Hit "Erase It ✨"',
+        description: 'Click the magic erase button and let our background Web Worker calculate surrounding textures. It takes just 5 to 15 seconds with live progress tracking.',
+      },
+      {
+        title: 'Compare & Download Your Clean Photo',
+        description: 'Drag the before-and-after comparison slider to verify the seamless background synthesis. Download your high-resolution clean photo instantly with zero watermarks.',
+      },
+    ],
+    features: [
+      'State-of-the-art client-side AI object inpainting running inside Web Workers',
+      'Interactive brush canvas with touch support for phones and tablets',
+      'Adjustable brush size slider and 10-step instant undo history stack',
+      'Side-by-side Before/After interactive split comparison slider',
+      '100% private & client-side — your photos never leave your device',
+      'Unlimited free downloads at full native resolution with no watermarks',
+    ],
+    faqs: [
+      {
+        question: 'Can I remove a person from a photo for free?',
+        answer: 'Yes! MultiZest AI Magic Eraser lets you remove people, objects, text, wires, or anything else from your photos completely free. Just paint over the person and the AI fills in the background naturally.',
+      },
+      {
+        question: 'Is my photo uploaded to a server?',
+        answer: 'No. Everything happens right in your browser sandbox using dedicated client-side Web Workers. Your photo never leaves your device, making this the most private object removal tool available.',
+      },
+      {
+        question: 'How does the AI know what to fill in?',
+        answer: 'The AI analyzes the surrounding pixels — the colors, textures, gradients, and patterns around the painted area — and intelligently synthesizes new pixels that blend seamlessly with the rest of the image.',
+      },
+      {
+        question: 'What size photos can I use?',
+        answer: 'Photos up to 10MB and 2000×2000 pixels work best. Larger photos are automatically resized proportionally to ensure smooth processing without freezing your browser.',
+      },
+    ],
+    relatedToolSlugs: ['colorize-photo', 'passport-photo', 'remove-background', 'ai-upscaler'],
+  },
+  {
+    id: 'colorize-photo',
+    slug: 'colorize-photo',
+    path: '/tools/image-tools/colorize-photo',
+    name: 'AI Photo Colorizer',
+    tagline: 'Add Realistic Colors to Black & White Photos',
+    shortDescription: 'Add realistic colors to old black and white photos using AI. Free, instant, no sign-up. Bring your family memories to life in seconds.',
+    longDescription: 'Upload any old black and white photograph — of your grandparents, ancestral heritage, historical vintage moments, or retro city streets — and our AI will add vibrant, realistic, natural-looking colors to it. It feels like giving old family memories a brand new life. MultiZest AI Photo Colorizer uses client-side chrominance synthesis in the CIELAB color space, analyzing luminance gradients, facial structures, atmospheric skies, and ground foliage to predict lifelike colors. Unlike cloud services that charge credits or harvest your historical family albums, our tool runs 100% locally on your computer or mobile device inside a background Web Worker. It includes an interactive Before & After slider, an adjustable Color Intensity slider (Subtle to Vivid), and one-click full-resolution export so you can print, frame, or share colorized family heirlooms with loved ones.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Palette',
+    badge: 'AI Color',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 2150,
+    howToSteps: [
+      {
+        title: 'Upload Your Vintage Black & White Photo',
+        description: 'Drop your grayscale image into the container or click to browse. We support standard JPG, PNG, and WebP portrait or landscape files up to 8MB.',
+      },
+      {
+        title: 'Click "Colorize Photo ✨"',
+        description: 'Initiate the background worker. The AI analyzes image luminance, facial skin tones, clothing textures, and outdoor scenery in 10 to 20 seconds.',
+      },
+      {
+        title: 'Fine-Tune Color Intensity',
+        description: 'Use the interactive Intensity slider to shift between subtle, natural vintage tones (50%) and bold, vivid modern colors (150%).',
+      },
+      {
+        title: 'Inspect & Download',
+        description: 'Slide the comparison divider to admire the transformation from black and white to living color. Download your master image in full resolution.',
+      },
+    ],
+    features: [
+      'Neural-heuristic chrominance synthesis in CIELAB color space',
+      'Realistic skin tone, sky gradient, and natural foliage detection',
+      'Customizable color intensity slider (50% subtle to 150% vivid)',
+      'Side-by-side Before/After interactive split comparison divider',
+      'Full original resolution download with zero loss in fidelity',
+      '100% client-side privacy — your family heirlooms never leave your computer',
+    ],
+    faqs: [
+      {
+        question: 'Can AI really add accurate colors to old photos?',
+        answer: 'Yes! Our AI algorithm analyzes luminance values, textures, and spatial context: skies are mapped to atmospheric blues, foliage to natural greens, and skin tones are warmed realistically. While it cannot know the exact original hue of an outfit, the result is remarkably natural.',
+      },
+      {
+        question: 'Will this work on very old, damaged photos?',
+        answer: 'The AI works best on clear, well-preserved black and white photos. If your photo is faded or blurry, our tool still enhances contrast and warmth. You can also pair it with our AI Upscaler for extra clarity.',
+      },
+      {
+        question: 'Can I adjust the colors if they look too saturated or too muted?',
+        answer: 'Yes! Simply drag the Color Intensity slider below the result. Slide left for softer, more subtle vintage tones or slide right for bold, vivid colors.',
+      },
+      {
+        question: 'Is my photo uploaded anywhere?',
+        answer: 'Absolutely not. The AI color engine runs entirely inside your browser memory using Web Workers. Your precious family photos never leave your device.',
+      },
+    ],
+    relatedToolSlugs: ['magic-eraser', 'passport-photo', 'ai-upscaler', 'image-compressor'],
+  },
+  {
+    id: 'passport-photo',
+    slug: 'passport-photo',
+    path: '/tools/image-tools/passport-photo',
+    name: 'Passport Photo Maker',
+    tagline: 'Create Official Biometric ID Photos & 4x6 Printable Sheets',
+    shortDescription: 'Make passport photos at home for free! AI auto-crops, removes background, and creates a printable sheet. Supports US, UK, India, EU, Canada & more.',
+    longDescription: 'Turn any smartphone selfie or portrait into an official, government-compliant passport or visa photo in seconds. The MultiZest Passport Photo Maker uses client-side face detection and background segmentation to locate your facial landmarks, replace cluttered backgrounds with clean biometric white (#FFFFFF), and crop to exact official millimeter and inch standards at 300 DPI. We support official passport dimensions for the United States, United Kingdom, India, European Union/Schengen, Canada, Pakistan, China, Australia, and custom dimensions. In addition to a single high-resolution portrait, our tool automatically tiles a printable 4×6 inch photo sheet with 4 to 6 photos complete with fine cut guide lines. Download the sheet, print it at any local pharmacy or retail store for under $0.50, and cut along the lines — saving you $15 or more per person compared to traditional photo studios.',
+    category: 'image-tools',
+    categoryName: 'Image Tools',
+    iconName: 'Camera',
+    badge: 'Official 300 DPI',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 3410,
+    howToSteps: [
+      {
+        title: 'Upload a Frontal Portrait or Selfie',
+        description: 'Take a well-lit photo facing the camera with a neutral expression and upload it. Both smartphone selfies and digital camera portraits work great.',
+      },
+      {
+        title: 'Select Your Country & Document Type',
+        description: 'Choose from US Passport (2x2"), UK (35x45mm), India, Schengen Visa, Canada, Pakistan, China, or enter custom width and height.',
+      },
+      {
+        title: 'Let AI Auto-Detect, Whiten & Biometric Crop',
+        description: 'Our background Web Worker centers your eyes, enforces official head height ratios (50-69%), and replaces the background with pure white.',
+      },
+      {
+        title: 'Download Single Photo or 4x6 Printable Sheet',
+        description: 'Download the single ID photo for online visa applications or save the 4x6" tiled sheet for high-gloss retail printing.',
+      },
+    ],
+    features: [
+      'Pre-configured official biometric templates for US, UK, EU, India, Canada & more',
+      'Precise 300 DPI high-resolution output for crisp razor-sharp printing',
+      'Automated background removal with solid white replacement',
+      'Automated biometric head-to-photo ratio calculation and eye alignment',
+      'Automatic 4×6 inch tiled printable sheet generation with fine cut guides',
+      'Built-in compliance checklist verifying centering, background, and head ratio',
+    ],
+    faqs: [
+      {
+        question: 'Will this passport photo be accepted by government passport offices?',
+        answer: 'Our tool follows the exact official dimensional, head ratio, and background requirements specified by government agencies like the US State Department and UK HM Passport Office. Make sure to use a well-lit photo with a neutral facial expression and no glasses or head coverings (unless religious).',
+      },
+      {
+        question: 'How do I print the passport photo sheet at home or in stores?',
+        answer: 'Download the generated 4×6 inch sheet. You can print it on a home photo printer with 4×6 glossy photo paper, or upload it to CVS, Walgreens, Walmart, or any photo kiosk for about $0.35 to $0.50 instead of paying $15+ for passport services!',
+      },
+      {
+        question: 'Which countries and document sizes are supported?',
+        answer: 'We support US Passport/Visa (2×2 inches), UK Passport (35×45 mm), India Passport (2×2 inches & 35×45 mm), Schengen Visa (35×45 mm), Canada Passport (50×70 mm), Pakistan Passport (35×45 mm), China (33×48 mm), Australia (35×45 mm), and custom millimeter dimensions.',
+      },
+      {
+        question: 'Are my portrait selfies saved or uploaded anywhere?',
+        answer: 'No. All facial detection, cropping, background replacement, and sheet layout generation occur 100% locally inside your web browser. Your private portraits never leave your computer or phone.',
+      },
+    ],
+    relatedToolSlugs: ['magic-eraser', 'colorize-photo', 'remove-background', 'image-cropper'],
+  },
+  {
+    id: 'voice-changer',
+    slug: 'voice-changer',
+    path: '/tools/audio-tools/voice-changer',
+    name: 'Real-Time Voice Changer',
+    tagline: 'Transform Your Voice with Robot, Deep, Chipmunk & Alien Effects',
+    shortDescription: 'Change your voice in real-time with fun effects: Robot, Deep Voice, Chipmunk, Echo, Ghost & more. Record and download. Free, no app needed!',
+    longDescription: 'Transform your voice in real-time right inside your web browser without downloading bulky software or paying subscription fees. The MultiZest Real-Time Voice Changer connects directly to your microphone using native Web Audio API nodes — including Biquad filters, WaveShaper distortion curves, feedback delay networks, and ring modulator oscillators — to instantly disguise your vocal pitch, tone, and resonance. Choose from 8 iconic studio voice effects: Cybernetic Robot, Deep Villain, Playful Squeaky Chipmunk, Cavernous Echo, Eerie Phantom Ghost, Tactical Walkie-Talkie, Extraterrestrial Alien, and Vintage Landline Telephone. Watch your live vocal frequencies dance on our real-time oscilloscope visualizer, record your transformed dialogue with one click, and download crisp lossless audio for YouTube video voiceovers, Discord streaming, gaming, podcasts, or playful voice notes.',
+    category: 'audio-tools',
+    categoryName: 'Audio Tools',
+    iconName: 'Mic',
+    badge: 'Real-Time Web Audio',
+    featured: true,
+    rating: 4.9,
+    ratingCount: 1890,
+    howToSteps: [
+      {
+        title: 'Select a Voice Effect Preset',
+        description: 'Pick an effect from our preset grid: Robot, Deep / Villain, Chipmunk, Echo / Cave, Ghost, Walkie-Talkie, Alien, or Telephone.',
+      },
+      {
+        title: 'Click "Start Talking 🎙️" & Allow Microphone',
+        description: 'Grant browser microphone permission when prompted. Connect headphones to prevent echo and speak into your microphone.',
+      },
+      {
+        title: 'Hear Yourself in Real-Time',
+        description: 'Your voice is modulated instantly with zero cloud lag. Adjust the volume slider or switch between presets on the fly.',
+      },
+      {
+        title: 'Record & Download Your Voice File',
+        description: 'Click "Record" while talking, then hit "Stop Recording" to review and download your transformed voice clip as a WAV or WebM audio file.',
+      },
+    ],
+    features: [
+      '8 distinct voice effects: Robot, Deep Villain, Chipmunk, Echo, Ghost, Radio, Alien & Telephone',
+      'Real-time live audio processing with hardware-accelerated Web Audio API',
+      'Interactive real-time oscilloscope visualizer canvas showing moving soundwaves',
+      'Built-in audio recording with duration timer and immediate playback preview',
+      'Lossless WAV master audio export suitable for content creators and video editors',
+      '100% private client-side audio — microphone audio is never uploaded or monitored',
+    ],
+    faqs: [
+      {
+        question: 'Do I need to install any software, plugins, or drivers?',
+        answer: 'No! The voice changer runs entirely inside your modern web browser (Chrome, Edge, Firefox, Safari) using native HTML5 Web Audio APIs.',
+      },
+      {
+        question: 'Can I record and download my transformed voice?',
+        answer: 'Yes! Click the "Record" button while speaking with an effect active. When finished, hit "Stop Recording", listen to the preview, and download the audio file in WAV or WebM format.',
+      },
+      {
+        question: 'Why do I hear an echo or howling feedback sound?',
+        answer: 'Audio feedback occurs when your microphone picks up sound playing from your speakers. To fix this, simply plug in headphones or earphones before starting!',
+      },
+      {
+        question: 'Does this work on mobile phones and tablets?',
+        answer: 'Yes, it works smoothly on mobile browsers including Chrome for Android and Safari for iOS with microphone permission enabled.',
+      },
+    ],
+    relatedToolSlugs: ['noise-remover', 'video-to-audio', 'text-to-speech', 'magic-eraser'],
+  },
+  {
+    id: 'noise-remover',
+    slug: 'noise-remover',
+    path: '/tools/audio-tools/noise-remover',
+    name: 'Audio Noise Cleaner',
+    tagline: 'Remove Background Noise, Fans & Traffic from Recordings',
+    shortDescription: 'Clean up noisy audio recordings instantly. Remove wind, fan, traffic, and background noise from podcasts, voice memos & videos. Free, no sign-up.',
+    longDescription: 'Have an important voice recording, interview, podcast episode, or lecture ruined by constant background hiss, air conditioning hum, desk fans, traffic rumble, or electrical buzzing? MultiZest Audio Noise Cleaner uses frequency-domain spectral subtraction and adaptive Wiener noise gating to eliminate unwanted acoustic background noise while keeping vocal speech crisp, clear, and professional. Unlike cloud tools that limit audio length or compromise privacy by uploading sensitive voice conversations to remote servers, our audio denoiser runs 100% client-side inside a high-performance Web Worker. You can choose between "Light" noise reduction (preserving full natural vocal warmth) or "Aggressive" noise stripping for extremely loud environments. Compare original vs cleaned recordings using stacked dual visualizer waveforms and download your cleaned audio in pristine master WAV format with zero quality degradation.',
+    category: 'audio-tools',
+    categoryName: 'Audio Tools',
+    iconName: 'Volume2',
+    badge: 'AI Denoise',
+    featured: true,
+    rating: 4.8,
+    ratingCount: 2470,
+    howToSteps: [
+      {
+        title: 'Upload Your Audio Recording',
+        description: 'Drag and drop your noisy audio file into the dropzone. We support MP3, WAV, M4A, OGG, and WebM files up to 50MB (roughly 30 minutes of speech).',
+      },
+      {
+        title: 'Inspect Original Waveform & Listen',
+        description: 'Review the audio metrics and waveform display. Press "Play Original" to identify the background hiss, fan hum, or ambient noise.',
+      },
+      {
+        title: 'Choose Noise Reduction Strength',
+        description: 'Select "Light" for gentle suppression that keeps maximum voice warmth, or "Aggressive" for strong noise stripping in noisy outdoor spaces.',
+      },
+      {
+        title: 'Clean & Download Studio-Grade Audio',
+        description: 'Click "Clean Background Noise Now". Compare the before and after waveforms, listen to the difference, and download your clean WAV audio file.',
+      },
+    ],
+    features: [
+      'Frequency-domain spectral subtraction and adaptive noise floor estimation',
+      'Removes air conditioner hums, fan whirs, traffic rumbles, and microphone hiss',
+      'Dual noise reduction modes: Light (warm & natural) and Aggressive (maximum isolation)',
+      'Stacked dual waveform visualizer comparing original vs cleaned audio tracks',
+      'Lossless 16-bit PCM WAV master export with zero audio compression artifacts',
+      '100% private in-browser processing — voice memos never touch external servers',
+    ],
+    faqs: [
+      {
+        question: 'What kinds of background noise can the tool remove?',
+        answer: 'It works best on steady, stationary noises such as air conditioner hums, computer fans, PC buzzing, wind rumble, constant traffic hiss, and low-frequency room reverberation. It is less effective on sudden erratic sounds like dog barks or door slams.',
+      },
+      {
+        question: 'Will cleaning the background noise affect my voice quality?',
+        answer: 'On the "Light" setting, your voice retains its full natural warmth and tone with noise suppressed by approximately 70%. On "Aggressive", noise is suppressed by 95%+, which may introduce slight filtering on very quiet whispers. We recommend starting with Light.',
+      },
+      {
+        question: 'Can I clean up the audio from a video recording?',
+        answer: 'Yes! First, use our free MultiZest "Video to Audio" converter tool to extract the MP3/WAV soundtrack from your MP4 or WebM video, clean it here, and re-attach it to your video project.',
+      },
+      {
+        question: 'What is the maximum audio file length supported?',
+        answer: 'You can upload audio files up to 50MB in size, which corresponds to approximately 30 minutes of continuous high-fidelity speech. Longer files can be split into segments.',
+      },
+    ],
+    relatedToolSlugs: ['voice-changer', 'video-to-audio', 'text-to-speech', 'magic-eraser'],
+  },
 ];
 
 export function getToolHref(tool: ToolItem): string {

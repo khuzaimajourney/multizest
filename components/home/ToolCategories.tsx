@@ -1,6 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { FileText, Image as ImageIcon, FileEdit, QrCode, ArrowRight } from 'lucide-react';
+import {
+  FileText,
+  Image as ImageIcon,
+  FileEdit,
+  QrCode,
+  ArrowRight,
+  Volume2,
+  Code,
+  Calculator,
+  Video,
+  Globe,
+  Sparkles,
+} from 'lucide-react';
 import { TOOL_CATEGORIES, TOOLS_DATA } from '@/lib/tools-data';
 
 export default function ToolCategories() {
@@ -14,8 +26,18 @@ export default function ToolCategories() {
         return <FileEdit className="w-6 h-6 text-amber-500" />;
       case 'QrCode':
         return <QrCode className="w-6 h-6 text-emerald-500" />;
+      case 'Volume2':
+        return <Volume2 className="w-6 h-6 text-cyan-500" />;
+      case 'Code':
+        return <Code className="w-6 h-6 text-sky-500" />;
+      case 'Calculator':
+        return <Calculator className="w-6 h-6 text-rose-500" />;
+      case 'Video':
+        return <Video className="w-6 h-6 text-fuchsia-500" />;
+      case 'Globe':
+        return <Globe className="w-6 h-6 text-indigo-500" />;
       default:
-        return <FileText className="w-6 h-6 text-blue-500" />;
+        return <Sparkles className="w-6 h-6 text-blue-500" />;
     }
   };
 
